@@ -1,0 +1,134 @@
+[16:54:15] Using device: cuda:0
+[16:54:15] Loading training data...
+[16:54:15] Training samples: 4150
+[16:54:15] Loading validation data...
+[16:54:15] Validation samples: 1012
+[16:54:15] Initializing model...
+[16:54:15] Model initialized on cuda:0
+[16:54:15] 
+=== Epoch 1/80 ===
+[16:54:15] Learning rate: 0.000100
+[16:54:17] Epoch 0 | Batch 0/518 | Loss: 4.9746
+[16:54:21] Epoch 0 | Batch 10/518 | Loss: 4.3378
+[16:54:26] Epoch 0 | Batch 20/518 | Loss: 4.4713
+[16:54:30] Epoch 0 | Batch 30/518 | Loss: 4.1876
+[16:54:34] Epoch 0 | Batch 40/518 | Loss: 3.8380
+[16:54:39] Epoch 0 | Batch 50/518 | Loss: 3.9338
+[16:54:42] Epoch 0 | Batch 60/518 | Loss: 3.7139
+[16:54:47] Epoch 0 | Batch 70/518 | Loss: 3.5066
+[16:54:51] Epoch 0 | Batch 80/518 | Loss: 3.6497
+[16:54:55] Epoch 0 | Batch 90/518 | Loss: 3.6869
+[16:55:00] Epoch 0 | Batch 100/518 | Loss: 3.4744
+[16:55:04] Epoch 0 | Batch 110/518 | Loss: 3.4783
+[16:55:08] Epoch 0 | Batch 120/518 | Loss: 3.3848
+[16:55:12] Epoch 0 | Batch 130/518 | Loss: 3.4702
+[16:55:17] Epoch 0 | Batch 140/518 | Loss: 3.1154
+[16:55:21] Epoch 0 | Batch 150/518 | Loss: 3.1782
+[16:55:25] Epoch 0 | Batch 160/518 | Loss: 3.3976
+[16:55:30] Epoch 0 | Batch 170/518 | Loss: 3.2374
+[16:55:34] Epoch 0 | Batch 180/518 | Loss: 3.3123
+[16:55:39] Epoch 0 | Batch 190/518 | Loss: 3.4513
+[16:55:43] Epoch 0 | Batch 200/518 | Loss: 3.2629
+[16:55:47] Epoch 0 | Batch 210/518 | Loss: 3.1809
+[16:55:51] Epoch 0 | Batch 220/518 | Loss: 3.0989
+[16:55:55] Epoch 0 | Batch 230/518 | Loss: 3.1641
+[16:56:00] Epoch 0 | Batch 240/518 | Loss: 3.0292
+[16:56:04] Epoch 0 | Batch 250/518 | Loss: 3.1761
+[16:56:07] Epoch 0 | Batch 260/518 | Loss: 3.2996
+[16:56:12] Epoch 0 | Batch 270/518 | Loss: 3.2716
+[16:56:16] Epoch 0 | Batch 280/518 | Loss: 3.0047
+[16:56:20] Epoch 0 | Batch 290/518 | Loss: 3.0704
+[16:56:24] Epoch 0 | Batch 300/518 | Loss: 2.9313
+[16:56:28] Epoch 0 | Batch 310/518 | Loss: 3.2186
+[16:56:32] Epoch 0 | Batch 320/518 | Loss: 2.9973
+[16:56:37] Epoch 0 | Batch 330/518 | Loss: 3.0373
+[16:56:41] Epoch 0 | Batch 340/518 | Loss: 3.0905
+[16:56:45] Epoch 0 | Batch 350/518 | Loss: 2.8502
+[16:56:49] Epoch 0 | Batch 360/518 | Loss: 3.3479
+[16:56:54] Epoch 0 | Batch 370/518 | Loss: 3.0747
+[16:56:58] Epoch 0 | Batch 380/518 | Loss: 3.5235
+[16:57:02] Epoch 0 | Batch 390/518 | Loss: 3.0361
+[16:57:07] Epoch 0 | Batch 400/518 | Loss: 3.1663
+[16:57:11] Epoch 0 | Batch 410/518 | Loss: 2.8262
+[16:57:15] Epoch 0 | Batch 420/518 | Loss: 3.1348
+[16:57:19] Epoch 0 | Batch 430/518 | Loss: 3.1163
+[16:57:23] Epoch 0 | Batch 440/518 | Loss: 3.1035
+[16:57:28] Epoch 0 | Batch 450/518 | Loss: 3.2346
+[16:57:31] Epoch 0 | Batch 460/518 | Loss: 3.2048
+[16:57:35] Epoch 0 | Batch 470/518 | Loss: 3.4224
+[16:57:40] Epoch 0 | Batch 480/518 | Loss: 3.1074
+[16:57:44] Epoch 0 | Batch 490/518 | Loss: 2.8590
+[16:57:47] Epoch 0 | Batch 500/518 | Loss: 3.3773
+[16:57:52] Epoch 0 | Batch 510/518 | Loss: 2.7942
+[16:57:55] Train Loss: 1.6536
+[16:58:17] Val Loss: 1.0373 | AUC: 0.7842 | IOU: 0.0950 | SIM: 0.4353 | MAE: 0.1447
+[16:58:17] 
+=== Epoch 2/80 ===
+[16:58:17] Learning rate: 0.000100
+[16:58:18] Epoch 1 | Batch 0/518 | Loss: 2.7895
+[16:58:22] Epoch 1 | Batch 10/518 | Loss: 2.8852
+[16:58:26] Epoch 1 | Batch 20/518 | Loss: 3.3508
+[16:58:30] Epoch 1 | Batch 30/518 | Loss: 2.9973
+[16:58:35] Epoch 1 | Batch 40/518 | Loss: 2.9096
+[16:58:39] Epoch 1 | Batch 50/518 | Loss: 2.7772
+[16:58:44] Epoch 1 | Batch 60/518 | Loss: 2.7384
+[16:58:48] Epoch 1 | Batch 70/518 | Loss: 2.7911
+[16:58:52] Epoch 1 | Batch 80/518 | Loss: 2.9913
+[16:58:56] Epoch 1 | Batch 90/518 | Loss: 2.8621
+[16:59:01] Epoch 1 | Batch 100/518 | Loss: 2.7394
+[16:59:05] Epoch 1 | Batch 110/518 | Loss: 2.9200
+[16:59:09] Epoch 1 | Batch 120/518 | Loss: 3.0060
+[16:59:14] Epoch 1 | Batch 130/518 | Loss: 3.2000
+[16:59:18] Epoch 1 | Batch 140/518 | Loss: 2.8856
+[16:59:22] Epoch 1 | Batch 150/518 | Loss: 2.7277
+[16:59:27] Epoch 1 | Batch 160/518 | Loss: 3.0444
+[16:59:30] Epoch 1 | Batch 170/518 | Loss: 3.1008
+[16:59:35] Epoch 1 | Batch 180/518 | Loss: 2.9450
+[16:59:39] Epoch 1 | Batch 190/518 | Loss: 2.8974
+[16:59:43] Epoch 1 | Batch 200/518 | Loss: 3.0709
+[16:59:47] Epoch 1 | Batch 210/518 | Loss: 3.0586
+[16:59:51] Epoch 1 | Batch 220/518 | Loss: 2.7710
+[16:59:55] Epoch 1 | Batch 230/518 | Loss: 2.6066
+[16:59:59] Epoch 1 | Batch 240/518 | Loss: 2.9090
+[17:00:03] Epoch 1 | Batch 250/518 | Loss: 2.6656
+[17:00:08] Epoch 1 | Batch 260/518 | Loss: 3.0127
+[17:00:12] Epoch 1 | Batch 270/518 | Loss: 2.8266
+[17:00:16] Epoch 1 | Batch 280/518 | Loss: 2.8172
+[17:00:21] Epoch 1 | Batch 290/518 | Loss: 2.7926
+[17:00:24] Epoch 1 | Batch 300/518 | Loss: 2.9415
+[17:00:28] Epoch 1 | Batch 310/518 | Loss: 2.6398
+[17:00:33] Epoch 1 | Batch 320/518 | Loss: 2.6306
+[17:00:37] Epoch 1 | Batch 330/518 | Loss: 2.7581
+[17:00:41] Epoch 1 | Batch 340/518 | Loss: 2.7011
+[17:00:45] Epoch 1 | Batch 350/518 | Loss: 2.6940
+[17:00:49] Epoch 1 | Batch 360/518 | Loss: 2.5905
+[17:00:54] Epoch 1 | Batch 370/518 | Loss: 2.9358
+[17:00:58] Epoch 1 | Batch 380/518 | Loss: 2.6645
+[17:01:02] Epoch 1 | Batch 390/518 | Loss: 2.9203
+[17:01:07] Epoch 1 | Batch 400/518 | Loss: 2.9960
+[17:01:10] Epoch 1 | Batch 410/518 | Loss: 3.0761
+[17:01:15] Epoch 1 | Batch 420/518 | Loss: 3.0913
+[17:01:19] Epoch 1 | Batch 430/518 | Loss: 2.8847
+[17:01:24] Epoch 1 | Batch 440/518 | Loss: 2.6798
+[17:01:28] Epoch 1 | Batch 450/518 | Loss: 2.6765
+[17:01:32] Epoch 1 | Batch 460/518 | Loss: 2.7477
+[17:01:36] Epoch 1 | Batch 470/518 | Loss: 3.0675
+[17:01:40] Epoch 1 | Batch 480/518 | Loss: 3.1602
+[17:01:44] Epoch 1 | Batch 490/518 | Loss: 2.6497
+[17:01:49] Epoch 1 | Batch 500/518 | Loss: 2.6275
+[17:01:53] Epoch 1 | Batch 510/518 | Loss: 2.7089
+[17:01:56] Train Loss: 1.4453
+[17:02:20] Val Loss: 1.0032 | AUC: 0.8033 | IOU: 0.1129 | SIM: 0.4800 | MAE: 0.1208
+[17:02:20] 
+=== Epoch 3/80 ===
+[17:02:20] Learning rate: 0.000100
+[17:02:21] Epoch 2 | Batch 0/518 | Loss: 2.7353
+[17:02:26] Epoch 2 | Batch 10/518 | Loss: 2.7880
+[17:02:30] Epoch 2 | Batch 20/518 | Loss: 2.8195
+[17:02:35] Epoch 2 | Batch 30/518 | Loss: 2.7729
+[17:02:39] Epoch 2 | Batch 40/518 | Loss: 2.8219
+[17:02:44] Epoch 2 | Batch 50/518 | Loss: 2.5891
+[17:02:48] Epoch 2 | Batch 60/518 | Loss: 2.7405
+[17:02:49] Training interrupted
+[17:02:49] 
+Training stopped - checkpoints preserved

@@ -1,0 +1,33 @@
+[02:38:32] Using device: cuda:0
+[02:38:32] Loading training data...
+[02:38:32] Training samples: 4194
+[02:38:32] Loading validation data...
+[02:38:32] Validation samples: 968
+[02:38:32] Initializing model...
+[02:38:33] Model initialized on cuda:0
+[02:38:33] 
+=== Epoch 1/80 ===
+[02:38:33] Learning rate: 0.000100
+[02:38:35] Epoch 0 | Batch 0/1048 | Loss: 6.0114
+[02:38:41] Epoch 0 | Batch 10/1048 | Loss: 5.0749
+[02:38:48] Epoch 0 | Batch 20/1048 | Loss: 5.0135
+[02:38:50] Training interrupted
+[02:38:50] 
+Training stopped - checkpoints preserved
+[02:38:57] Using device: cuda:0
+[02:38:57] Loading training data...
+[02:38:57] Training samples: 4194
+[02:38:57] Loading validation data...
+[02:38:57] Validation samples: 968
+[02:38:57] Initializing model...
+[02:38:58] Model initialized on cuda:0
+[02:38:58] 
+=== Epoch 1/80 ===
+[02:38:58] Learning rate: 0.000100
+[02:38:59] Epoch 0 | Batch 0/262 | Loss: 5.3987
+[02:39:04] Epoch 0 | Batch 10/262 | Loss: 4.4976
+[02:39:08] Epoch 0 | Batch 20/262 | Loss: 4.0314
+[02:39:13] Epoch 0 | Batch 30/262 | Loss: 3.9699
+[02:39:13] Training interrupted
+[02:39:13] 
+Training stopped - checkpoints preserved

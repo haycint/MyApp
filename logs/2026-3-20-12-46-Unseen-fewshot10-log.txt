@@ -1,0 +1,30 @@
+[12:46:19] Using device: cuda:0
+[12:46:19] Using Few-shot learning for Unseen dataset (10 shots per class)
+[12:46:19] Creating Few-shot training dataset...
+[12:46:19] Creating Few-shot validation dataset...
+[12:46:19] Training samples: 99
+[12:46:19] Validation samples: 869
+[12:46:19] Initializing model...
+[12:46:19] Model initialized on cuda:0
+[12:46:19] Loading breakpoint: /root/autodl-tmp/MyApp/break_point/2026-3-17-2-39-Unseen-model-5.pt
+[12:46:19] Resumed from epoch 80
+[12:46:19] Automatically extended training to 160 epochs
+[12:46:19] 
+=== Epoch 81/160 ===
+[12:46:19] Learning rate: 0.000001
+[12:46:19] Few-shot setting: 10 samples per class
+[12:46:21] Epoch 80 | Batch 0/12 | Loss: 2.0132
+[12:46:23] Epoch 80 | Batch 10/12 | Loss: 2.2090
+[12:46:24] Train Loss: 1.0267
+[12:46:47] Val Loss: 1.0438 | AUC: 0.6766 | IOU: 0.0763 | SIM: 0.3384 | MAE: 0.1223
+[12:46:47] 
+=== Epoch 82/160 ===
+[12:46:47] Learning rate: 0.000001
+[12:46:47] Few-shot setting: 10 samples per class
+[12:46:47] Epoch 81 | Batch 0/12 | Loss: 2.1165
+[12:46:50] Epoch 81 | Batch 10/12 | Loss: 1.6454
+[12:46:51] Train Loss: 0.9563
+[12:47:08] Val Loss: 0.7572 | AUC: 0.6724 | IOU: 0.0770 | SIM: 0.2463 | MAE: 0.1246
+[12:47:08] Training stopped by user request
+[12:47:08] 
+Training stopped - checkpoints preserved

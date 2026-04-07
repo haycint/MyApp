@@ -1,0 +1,52 @@
+[02:34:07] Using device: cuda:0
+[02:34:07] Loading training data...
+[02:34:07] Training samples: 4150
+[02:34:07] Loading validation data...
+[02:34:07] Validation samples: 1012
+[02:34:07] Initializing model...
+[02:34:07] Model initialized on cuda:0
+[02:34:07] 
+=== Epoch 1/80 ===
+[02:34:07] Learning rate: 0.000100
+[02:34:08] Epoch 0 | Batch 0/259 | Loss: 5.2081
+[02:34:13] Epoch 0 | Batch 10/259 | Loss: 4.5333
+[02:34:17] Epoch 0 | Batch 20/259 | Loss: 3.9407
+[02:34:21] Epoch 0 | Batch 30/259 | Loss: 3.7382
+[02:34:26] Training interrupted
+[02:34:26] 
+Training stopped - checkpoints preserved
+[02:34:36] Using device: cuda:0
+[02:34:36] Loading training data...
+[02:34:36] Training samples: 4150
+[02:34:36] Loading validation data...
+[02:34:36] Validation samples: 1012
+[02:34:36] Initializing model...
+[02:34:36] Model initialized on cuda:0
+[02:34:36] 
+=== Epoch 1/80 ===
+[02:34:36] Learning rate: 0.000100
+[02:34:37] Epoch 0 | Batch 0/518 | Loss: 4.9868
+[02:34:45] Epoch 0 | Batch 10/518 | Loss: 4.8707
+[02:34:52] Epoch 0 | Batch 20/518 | Loss: 4.0698
+[02:34:59] Epoch 0 | Batch 30/518 | Loss: 4.3971
+[02:35:06] Epoch 0 | Batch 40/518 | Loss: 3.9606
+[02:35:14] Epoch 0 | Batch 50/518 | Loss: 3.7638
+[02:35:21] Epoch 0 | Batch 60/518 | Loss: 4.1987
+[02:35:28] Epoch 0 | Batch 70/518 | Loss: 3.7187
+[02:35:35] Epoch 0 | Batch 80/518 | Loss: 3.6135
+[02:35:42] Epoch 0 | Batch 90/518 | Loss: 3.6709
+[02:35:49] Epoch 0 | Batch 100/518 | Loss: 3.7319
+[02:35:56] Epoch 0 | Batch 110/518 | Loss: 3.5254
+[02:36:03] Epoch 0 | Batch 120/518 | Loss: 3.2134
+[02:36:10] Epoch 0 | Batch 130/518 | Loss: 3.6843
+[02:36:17] Epoch 0 | Batch 140/518 | Loss: 3.3150
+[02:36:25] Epoch 0 | Batch 150/518 | Loss: 3.1427
+[02:36:32] Epoch 0 | Batch 160/518 | Loss: 3.3258
+[02:36:39] Epoch 0 | Batch 170/518 | Loss: 3.4597
+[02:36:46] Epoch 0 | Batch 180/518 | Loss: 3.2093
+[02:36:53] Epoch 0 | Batch 190/518 | Loss: 3.2373
+[02:37:01] Epoch 0 | Batch 200/518 | Loss: 3.1898
+[02:37:08] Epoch 0 | Batch 210/518 | Loss: 3.2845
+[02:37:13] Training interrupted
+[02:37:13] 
+Training stopped - checkpoints preserved

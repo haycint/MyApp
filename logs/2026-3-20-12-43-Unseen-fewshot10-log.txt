@@ -1,0 +1,25 @@
+[12:43:12] Using device: cuda:0
+[12:43:12] Using Few-shot learning for Unseen dataset (10 shots per class)
+[12:43:12] Creating Few-shot training dataset...
+[12:43:12] Creating Few-shot validation dataset...
+[12:43:12] Training samples: 99
+[12:43:12] Validation samples: 869
+[12:43:12] Initializing model...
+[12:43:12] Model initialized on cuda:0
+[12:43:12] Loading breakpoint: /root/autodl-tmp/MyApp/break_point/2026-3-17-2-39-Unseen-model-5.pt
+[12:43:13] Resumed from epoch 80
+[12:43:13] Automatically extended training to 160 epochs
+[12:43:13] 
+=== Epoch 81/160 ===
+[12:43:13] Learning rate: 0.000001
+[12:43:13] Few-shot setting: 10 samples per class
+[12:43:13] ERROR: too many values to unpack (expected 6)
+[12:43:13] Traceback (most recent call last):
+  File "/root/autodl-tmp/MyApp/backend.py", line 924, in run_few_shot_training
+    train_loss = backend.train_epoch()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/backend.py", line 605, in train_epoch
+    for i, (img, points, labels, logits_labels, sub_box, obj_box) in enumerate(self.train_loader):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 6)
+

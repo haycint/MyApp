@@ -1,0 +1,15 @@
+[12:21:18] Using device: cuda:0
+[12:21:18] Using Few-shot learning for Unseen dataset (10 shots per class)
+[12:21:18] Creating Few-shot training dataset...
+[12:21:18] Creating Few-shot validation dataset...
+[12:21:18] Training samples: 99
+[12:21:18] Validation samples: 869
+[12:21:18] Initializing model...
+[12:21:18] Model initialized on cuda:0
+[12:21:18] Loading breakpoint: /root/autodl-tmp/MyApp/break_point/2026-3-17-2-39-Unseen-model-5.pt
+[12:21:18] Resumed from epoch 80
+[12:21:18] 
+==================================================
+[12:21:18] Training completed successfully!
+[12:21:19] Model saved: 2026-3-20-12-21-Unseen-fewshot10-model.pt
+[12:21:19] Training curves saved: 2026-3-20-12-21-Unseen-fewshot10-loss.png

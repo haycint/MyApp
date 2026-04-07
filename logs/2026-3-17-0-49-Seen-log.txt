@@ -1,0 +1,27 @@
+[00:49:06] Using device: cuda:0
+[00:49:06] Loading training data...
+[00:49:06] Training samples: 4150
+[00:49:06] Loading validation data...
+[00:49:06] Validation samples: 1012
+[00:49:06] Initializing model...
+[00:49:06] Model initialized on cuda:0
+[00:49:06] 
+=== Epoch 1/80 ===
+[00:49:06] Learning rate: 0.000100
+[00:49:08] Epoch 0 | Batch 0/518 | Loss: 5.5093
+[00:49:12] Epoch 0 | Batch 10/518 | Loss: 5.2035
+[00:49:16] Epoch 0 | Batch 20/518 | Loss: 4.5442
+[00:49:19] Epoch 0 | Batch 30/518 | Loss: 4.4476
+[00:49:23] Epoch 0 | Batch 40/518 | Loss: 4.0752
+[00:49:27] Epoch 0 | Batch 50/518 | Loss: 3.9518
+[00:49:31] Epoch 0 | Batch 60/518 | Loss: 3.8923
+[00:49:34] Epoch 0 | Batch 70/518 | Loss: 3.8184
+[00:49:38] Epoch 0 | Batch 80/518 | Loss: 3.8893
+[00:49:42] Epoch 0 | Batch 90/518 | Loss: 3.6674
+[00:49:46] Epoch 0 | Batch 100/518 | Loss: 3.4459
+[00:49:49] Epoch 0 | Batch 110/518 | Loss: 3.7778
+[00:49:53] Epoch 0 | Batch 120/518 | Loss: 3.4253
+[00:49:57] Epoch 0 | Batch 130/518 | Loss: 3.6252
+[00:49:58] Training interrupted
+[00:49:58] 
+Training stopped - checkpoints preserved

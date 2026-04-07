@@ -1,0 +1,17 @@
+[09:00:38] Using device: cuda:0
+[09:00:38] Loading training data...
+[09:00:38] Training samples: 4150
+[09:00:38] Loading validation data...
+[09:00:38] Validation samples: 1012
+[09:00:38] Initializing model...
+[09:00:38] Model initialized on cuda:0
+[09:00:38] Loading breakpoint: /root/autodl-tmp/MyApp/break_point/2026-3-20-8-28-Seen-model-5.pt
+[09:00:39] Resumed from epoch 6
+[09:00:39] 
+=== Epoch 7/80 ===
+[09:00:39] Learning rate: 0.000099
+[09:00:40] Epoch 6 | Batch 0/518 | Loss: 2.8036
+[09:00:44] Epoch 6 | Batch 10/518 | Loss: 2.4785
+[09:00:48] Training interrupted
+[09:00:48] 
+Training stopped - checkpoints preserved

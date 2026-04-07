@@ -1,0 +1,48 @@
+# Annotation Model Training Configuration
+# 标注模型训练配置文件
+
+# ============ 基础设置 ============
+seed: 42
+device: 'cuda'  # 'cuda' 或 'cpu'
+
+# ============ 数据设置 ============
+dataset_type: 'piad'  # 'piad', 'custom', 或 'synthetic'
+data_dir: './Data'   # PIAD数据目录
+img_size: [224, 224]  # 输入图像尺寸
+
+# ============ 模型设置 ============
+num_interactions: 17   # 可供性类别数量
+pretrained: true      # 是否使用预训练backbone
+
+# ============ 训练设置 ============
+epochs: 100
+batch_size: 8
+num_workers: 4
+
+# ============ 优化器设置 ============
+lr: 0.0001            # 初始学习率
+weight_decay: 0.0001  # 权重衰减
+
+# ============ 保存设置 ============
+save_dir: './checkpoints/annotation'
+save_every: 5         # 每隔多少epoch保存
+
+# ============ 可供性类别 ============
+affordance_labels:
+  - grasp      # 抓握
+  - contain    # 容纳
+  - lift       # 抬起
+  - open       # 打开
+  - lay        # 平放
+  - sit        # 坐
+  - support    # 支撑
+  - wrapgrasp  # 环绕抓握
+  - pour       # 倾倒
+  - move       # 移动
+  - display    # 展示
+  - push       # 推
+  - listen     # 听
+  - wear       # 穿戴
+  - press      # 按压
+  - cut        # 切割
+  - stab       # 刺入

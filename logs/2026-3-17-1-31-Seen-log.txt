@@ -1,0 +1,45 @@
+[01:31:20] Using device: cuda:0
+[01:31:20] Loading training data...
+[01:31:20] Training samples: 4150
+[01:31:20] Loading validation data...
+[01:31:20] Validation samples: 1012
+[01:31:20] Initializing model...
+[01:31:21] Model initialized on cuda:0
+[01:31:21] 
+=== Epoch 1/1 ===
+[01:31:21] Learning rate: 0.000100
+[01:31:22] Epoch 0 | Batch 0/518 | Loss: 5.2834
+[01:31:32] Epoch 0 | Batch 10/518 | Loss: 4.9373
+[01:31:41] Epoch 0 | Batch 20/518 | Loss: 4.4676
+[01:31:49] Epoch 0 | Batch 30/518 | Loss: 4.5644
+[01:31:57] Epoch 0 | Batch 40/518 | Loss: 4.1695
+[01:32:05] Epoch 0 | Batch 50/518 | Loss: 4.0402
+[01:32:13] Epoch 0 | Batch 60/518 | Loss: 3.9100
+[01:32:21] Epoch 0 | Batch 70/518 | Loss: 4.1889
+[01:32:30] Epoch 0 | Batch 80/518 | Loss: 3.8441
+[01:32:37] Epoch 0 | Batch 90/518 | Loss: 3.4974
+[01:32:45] Epoch 0 | Batch 100/518 | Loss: 3.7314
+[01:32:52] Epoch 0 | Batch 110/518 | Loss: 3.6512
+[01:33:00] Epoch 0 | Batch 120/518 | Loss: 3.6992
+[01:33:07] Epoch 0 | Batch 130/518 | Loss: 3.5750
+[01:33:15] Epoch 0 | Batch 140/518 | Loss: 3.4845
+[01:33:23] Epoch 0 | Batch 150/518 | Loss: 3.5059
+[01:33:31] Epoch 0 | Batch 160/518 | Loss: 3.1874
+[01:33:38] Epoch 0 | Batch 170/518 | Loss: 3.2760
+[01:33:46] Epoch 0 | Batch 180/518 | Loss: 3.4326
+[01:33:54] Epoch 0 | Batch 190/518 | Loss: 3.3765
+[01:34:01] Epoch 0 | Batch 200/518 | Loss: 3.1600
+[01:34:08] Epoch 0 | Batch 210/518 | Loss: 3.1692
+[01:34:16] Epoch 0 | Batch 220/518 | Loss: 3.1196
+[01:34:23] Epoch 0 | Batch 230/518 | Loss: 3.3953
+[01:34:31] Epoch 0 | Batch 240/518 | Loss: 3.0538
+[01:34:38] Epoch 0 | Batch 250/518 | Loss: 3.4827
+[01:34:46] Epoch 0 | Batch 260/518 | Loss: 3.6897
+[01:34:53] Epoch 0 | Batch 270/518 | Loss: 3.1935
+[01:35:01] Epoch 0 | Batch 280/518 | Loss: 3.3725
+[01:35:08] Epoch 0 | Batch 290/518 | Loss: 3.0480
+[01:35:15] Epoch 0 | Batch 300/518 | Loss: 3.2328
+[01:35:23] Epoch 0 | Batch 310/518 | Loss: 3.0936
+[01:35:26] Training interrupted
+[01:35:26] 
+Training stopped - checkpoints preserved

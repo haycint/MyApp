@@ -1,0 +1,17 @@
+[02:29:22] Using device: cuda:0
+[02:29:22] Loading training data...
+[02:29:22] Training samples: 4150
+[02:29:22] Loading validation data...
+[02:29:22] Validation samples: 1012
+[02:29:22] Initializing model...
+[02:29:23] Model initialized on cuda:0
+[02:29:23] 
+=== Epoch 1/80 ===
+[02:29:23] Learning rate: 0.000100
+[02:29:26] Epoch 0 | Batch 0/259 | Loss: 5.3208
+[02:29:33] Epoch 0 | Batch 10/259 | Loss: 4.6963
+[02:29:40] Epoch 0 | Batch 20/259 | Loss: 3.9649
+[02:29:46] Epoch 0 | Batch 30/259 | Loss: 3.8702
+[02:29:50] Training interrupted
+[02:29:50] 
+Training stopped - checkpoints preserved

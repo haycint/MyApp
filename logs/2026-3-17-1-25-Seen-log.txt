@@ -1,0 +1,763 @@
+[01:25:21] Using device: cuda:0
+[01:25:21] Loading training data...
+[01:25:21] Training samples: 4150
+[01:25:21] Loading validation data...
+[01:25:21] Validation samples: 1012
+[01:25:21] Initializing model...
+[01:25:21] Model initialized on cuda:0
+[01:25:21] 
+=== Epoch 1/80 ===
+[01:25:21] Learning rate: 0.000100
+[01:25:22] Epoch 0 | Batch 0/518 | Loss: 5.3939
+[01:25:26] Epoch 0 | Batch 10/518 | Loss: 4.7118
+[01:25:31] Epoch 0 | Batch 20/518 | Loss: 4.3400
+[01:25:34] Epoch 0 | Batch 30/518 | Loss: 4.2551
+[01:25:37] Epoch 0 | Batch 40/518 | Loss: 4.0640
+[01:25:41] Epoch 0 | Batch 50/518 | Loss: 3.6237
+[01:25:44] Epoch 0 | Batch 60/518 | Loss: 3.7910
+[01:25:48] Epoch 0 | Batch 70/518 | Loss: 3.6343
+[01:25:53] Epoch 0 | Batch 80/518 | Loss: 3.5988
+[01:25:56] Epoch 0 | Batch 90/518 | Loss: 3.5804
+[01:25:58] Using device: cuda:0
+[01:25:58] Loading training data...
+[01:25:58] Training samples: 4150
+[01:25:58] Loading validation data...
+[01:25:58] Validation samples: 1012
+[01:25:58] Initializing model...
+[01:25:58] Model initialized on cuda:0
+[01:25:58] 
+=== Epoch 1/80 ===
+[01:25:58] Learning rate: 0.000100
+[01:26:00] Epoch 0 | Batch 0/518 | Loss: 5.0594
+[01:26:00] Training interrupted
+[01:26:00] 
+Training stopped - checkpoints preserved
+[01:26:01] Epoch 0 | Batch 100/518 | Loss: 3.5293
+[01:26:05] Epoch 0 | Batch 110/518 | Loss: 3.4700
+[01:26:09] Epoch 0 | Batch 120/518 | Loss: 3.2942
+[01:26:12] Epoch 0 | Batch 130/518 | Loss: 3.7243
+[01:26:16] Epoch 0 | Batch 140/518 | Loss: 3.2971
+[01:26:19] Epoch 0 | Batch 150/518 | Loss: 3.2896
+[01:26:22] Epoch 0 | Batch 160/518 | Loss: 3.3312
+[01:26:26] Epoch 0 | Batch 170/518 | Loss: 3.6441
+[01:26:29] Epoch 0 | Batch 180/518 | Loss: 3.4284
+[01:26:33] Epoch 0 | Batch 190/518 | Loss: 3.0841
+[01:26:36] Epoch 0 | Batch 200/518 | Loss: 3.1190
+[01:26:39] Epoch 0 | Batch 210/518 | Loss: 3.2413
+[01:26:43] Epoch 0 | Batch 220/518 | Loss: 3.0442
+[01:26:46] Epoch 0 | Batch 230/518 | Loss: 2.9231
+[01:26:50] Epoch 0 | Batch 240/518 | Loss: 3.1012
+[01:26:53] Epoch 0 | Batch 250/518 | Loss: 3.3064
+[01:26:57] Epoch 0 | Batch 260/518 | Loss: 3.1613
+[01:27:00] Epoch 0 | Batch 270/518 | Loss: 3.2868
+[01:27:04] Epoch 0 | Batch 280/518 | Loss: 2.9325
+[01:27:07] Epoch 0 | Batch 290/518 | Loss: 3.0282
+[01:27:10] Epoch 0 | Batch 300/518 | Loss: 3.0991
+[01:27:14] Epoch 0 | Batch 310/518 | Loss: 3.4141
+[01:27:17] Epoch 0 | Batch 320/518 | Loss: 3.2621
+[01:27:20] Epoch 0 | Batch 330/518 | Loss: 3.3044
+[01:27:24] Epoch 0 | Batch 340/518 | Loss: 2.9070
+[01:27:27] Epoch 0 | Batch 350/518 | Loss: 3.1382
+[01:27:31] Epoch 0 | Batch 360/518 | Loss: 3.1477
+[01:27:34] Epoch 0 | Batch 370/518 | Loss: 3.0147
+[01:27:39] Epoch 0 | Batch 380/518 | Loss: 3.3710
+[01:27:43] Epoch 0 | Batch 390/518 | Loss: 2.9555
+[01:27:46] Epoch 0 | Batch 400/518 | Loss: 2.9983
+[01:27:50] Epoch 0 | Batch 410/518 | Loss: 2.8837
+[01:27:53] Epoch 0 | Batch 420/518 | Loss: 2.8099
+[01:27:56] Epoch 0 | Batch 430/518 | Loss: 3.3787
+[01:28:00] Epoch 0 | Batch 440/518 | Loss: 2.9349
+[01:28:03] Epoch 0 | Batch 450/518 | Loss: 3.0740
+[01:28:07] Epoch 0 | Batch 460/518 | Loss: 3.2271
+[01:28:10] Epoch 0 | Batch 470/518 | Loss: 2.9258
+[01:28:13] Epoch 0 | Batch 480/518 | Loss: 3.1760
+[01:28:17] Epoch 0 | Batch 490/518 | Loss: 3.0629
+[01:28:20] Epoch 0 | Batch 500/518 | Loss: 3.1994
+[01:28:24] Epoch 0 | Batch 510/518 | Loss: 2.9380
+[01:28:26] Train Loss: 1.6602
+[01:28:45] Val Loss: 1.0439 | AUC: 0.7721 | IOU: 0.0962 | SIM: 0.4337 | MAE: 0.1579
+[01:28:45] 
+=== Epoch 2/80 ===
+[01:28:45] Learning rate: 0.000100
+[01:28:46] Epoch 1 | Batch 0/518 | Loss: 2.7778
+[01:28:50] Epoch 1 | Batch 10/518 | Loss: 2.8847
+[01:28:53] Epoch 1 | Batch 20/518 | Loss: 2.9304
+[01:28:57] Epoch 1 | Batch 30/518 | Loss: 3.0701
+[01:29:00] Epoch 1 | Batch 40/518 | Loss: 2.8016
+[01:29:04] Epoch 1 | Batch 50/518 | Loss: 3.1145
+[01:29:07] Epoch 1 | Batch 60/518 | Loss: 2.9653
+[01:29:13] Epoch 1 | Batch 70/518 | Loss: 2.9339
+[01:29:21] Epoch 1 | Batch 80/518 | Loss: 2.8791
+[01:29:28] Epoch 1 | Batch 90/518 | Loss: 2.9163
+[01:29:36] Epoch 1 | Batch 100/518 | Loss: 2.9449
+[01:29:41] Epoch 1 | Batch 110/518 | Loss: 3.1801
+[01:29:45] Epoch 1 | Batch 120/518 | Loss: 2.6113
+[01:29:49] Epoch 1 | Batch 130/518 | Loss: 2.7104
+[01:29:53] Epoch 1 | Batch 140/518 | Loss: 2.9220
+[01:29:58] Epoch 1 | Batch 150/518 | Loss: 2.8963
+[01:30:02] Epoch 1 | Batch 160/518 | Loss: 3.0201
+[01:30:08] Epoch 1 | Batch 170/518 | Loss: 2.7435
+[01:30:16] Epoch 1 | Batch 180/518 | Loss: 3.0944
+[01:30:25] Epoch 1 | Batch 190/518 | Loss: 2.8671
+[01:30:33] Epoch 1 | Batch 200/518 | Loss: 3.0098
+[01:30:41] Epoch 1 | Batch 210/518 | Loss: 2.9537
+[01:30:51] Epoch 1 | Batch 220/518 | Loss: 2.6946
+[01:30:59] Epoch 1 | Batch 230/518 | Loss: 3.2671
+[01:31:08] Epoch 1 | Batch 240/518 | Loss: 2.8425
+[01:31:16] Epoch 1 | Batch 250/518 | Loss: 3.1132
+[01:31:22] Epoch 1 | Batch 260/518 | Loss: 2.5925
+[01:31:31] Epoch 1 | Batch 270/518 | Loss: 2.8355
+[01:31:40] Epoch 1 | Batch 280/518 | Loss: 2.9077
+[01:31:48] Epoch 1 | Batch 290/518 | Loss: 2.8428
+[01:31:56] Epoch 1 | Batch 300/518 | Loss: 2.8977
+[01:32:04] Epoch 1 | Batch 310/518 | Loss: 2.6804
+[01:32:13] Epoch 1 | Batch 320/518 | Loss: 2.9438
+[01:32:21] Epoch 1 | Batch 330/518 | Loss: 2.9828
+[01:32:29] Epoch 1 | Batch 340/518 | Loss: 2.7403
+[01:32:37] Epoch 1 | Batch 350/518 | Loss: 2.8877
+[01:32:44] Epoch 1 | Batch 360/518 | Loss: 2.9473
+[01:32:52] Epoch 1 | Batch 370/518 | Loss: 2.8081
+[01:32:59] Epoch 1 | Batch 380/518 | Loss: 2.9729
+[01:33:06] Epoch 1 | Batch 390/518 | Loss: 3.2376
+[01:33:13] Epoch 1 | Batch 400/518 | Loss: 3.1651
+[01:33:21] Epoch 1 | Batch 410/518 | Loss: 3.2528
+[01:33:29] Epoch 1 | Batch 420/518 | Loss: 2.9331
+[01:33:37] Epoch 1 | Batch 430/518 | Loss: 2.8721
+[01:33:44] Epoch 1 | Batch 440/518 | Loss: 3.1387
+[01:33:52] Epoch 1 | Batch 450/518 | Loss: 2.8535
+[01:33:59] Epoch 1 | Batch 460/518 | Loss: 2.7216
+[01:34:07] Epoch 1 | Batch 470/518 | Loss: 2.8073
+[01:34:14] Epoch 1 | Batch 480/518 | Loss: 2.9583
+[01:34:22] Epoch 1 | Batch 490/518 | Loss: 2.7282
+[01:34:29] Epoch 1 | Batch 500/518 | Loss: 2.8944
+[01:34:37] Epoch 1 | Batch 510/518 | Loss: 2.7540
+[01:34:42] Train Loss: 1.4415
+[01:35:23] Val Loss: 1.0067 | AUC: 0.7953 | IOU: 0.1152 | SIM: 0.4747 | MAE: 0.1207
+[01:35:23] 
+=== Epoch 3/80 ===
+[01:35:23] Learning rate: 0.000100
+[01:35:25] Epoch 2 | Batch 0/518 | Loss: 2.8731
+[01:35:29] Epoch 2 | Batch 10/518 | Loss: 2.7806
+[01:35:34] Epoch 2 | Batch 20/518 | Loss: 2.5023
+[01:35:38] Epoch 2 | Batch 30/518 | Loss: 2.8364
+[01:35:47] Epoch 2 | Batch 40/518 | Loss: 2.7194
+[01:35:56] Epoch 2 | Batch 50/518 | Loss: 2.7988
+[01:36:05] Epoch 2 | Batch 60/518 | Loss: 2.7028
+[01:36:13] Epoch 2 | Batch 70/518 | Loss: 2.7996
+[01:36:21] Epoch 2 | Batch 80/518 | Loss: 2.9949
+[01:36:30] Epoch 2 | Batch 90/518 | Loss: 2.5977
+[01:36:40] Epoch 2 | Batch 100/518 | Loss: 2.7840
+[01:36:45] Epoch 2 | Batch 110/518 | Loss: 2.5963
+[01:36:49] Epoch 2 | Batch 120/518 | Loss: 2.6175
+[01:36:52] Epoch 2 | Batch 130/518 | Loss: 2.7350
+[01:36:56] Epoch 2 | Batch 140/518 | Loss: 2.7502
+[01:37:00] Epoch 2 | Batch 150/518 | Loss: 2.7817
+[01:37:04] Epoch 2 | Batch 160/518 | Loss: 3.0427
+[01:37:08] Epoch 2 | Batch 170/518 | Loss: 2.7574
+[01:37:12] Epoch 2 | Batch 180/518 | Loss: 2.7236
+[01:37:15] Epoch 2 | Batch 190/518 | Loss: 2.7155
+[01:37:19] Epoch 2 | Batch 200/518 | Loss: 2.8085
+[01:37:23] Epoch 2 | Batch 210/518 | Loss: 2.9819
+[01:37:27] Epoch 2 | Batch 220/518 | Loss: 2.6888
+[01:37:30] Epoch 2 | Batch 230/518 | Loss: 2.7063
+[01:37:34] Epoch 2 | Batch 240/518 | Loss: 2.7055
+[01:37:38] Epoch 2 | Batch 250/518 | Loss: 2.6264
+[01:37:42] Epoch 2 | Batch 260/518 | Loss: 2.9842
+[01:37:46] Epoch 2 | Batch 270/518 | Loss: 2.7235
+[01:37:50] Epoch 2 | Batch 280/518 | Loss: 2.6984
+[01:37:53] Epoch 2 | Batch 290/518 | Loss: 2.5823
+[01:37:57] Epoch 2 | Batch 300/518 | Loss: 2.6083
+[01:38:01] Epoch 2 | Batch 310/518 | Loss: 2.7337
+[01:38:05] Epoch 2 | Batch 320/518 | Loss: 2.7297
+[01:38:09] Epoch 2 | Batch 330/518 | Loss: 2.9427
+[01:38:13] Epoch 2 | Batch 340/518 | Loss: 2.6228
+[01:38:17] Epoch 2 | Batch 350/518 | Loss: 2.8092
+[01:38:20] Epoch 2 | Batch 360/518 | Loss: 2.6421
+[01:38:24] Epoch 2 | Batch 370/518 | Loss: 2.9839
+[01:38:28] Epoch 2 | Batch 380/518 | Loss: 2.6640
+[01:38:32] Epoch 2 | Batch 390/518 | Loss: 2.7462
+[01:38:36] Epoch 2 | Batch 400/518 | Loss: 3.1648
+[01:38:40] Epoch 2 | Batch 410/518 | Loss: 2.6003
+[01:38:43] Epoch 2 | Batch 420/518 | Loss: 2.7817
+[01:38:47] Epoch 2 | Batch 430/518 | Loss: 2.6720
+[01:38:51] Epoch 2 | Batch 440/518 | Loss: 2.8125
+[01:38:55] Epoch 2 | Batch 450/518 | Loss: 2.7550
+[01:38:59] Epoch 2 | Batch 460/518 | Loss: 2.7408
+[01:39:03] Epoch 2 | Batch 470/518 | Loss: 2.7291
+[01:39:07] Epoch 2 | Batch 480/518 | Loss: 2.5524
+[01:39:10] Epoch 2 | Batch 490/518 | Loss: 2.4666
+[01:39:14] Epoch 2 | Batch 500/518 | Loss: 2.7184
+[01:39:18] Epoch 2 | Batch 510/518 | Loss: 2.7722
+[01:39:21] Train Loss: 1.3867
+[01:39:42] Val Loss: 0.9897 | AUC: 0.8134 | IOU: 0.1278 | SIM: 0.4967 | MAE: 0.1157
+[01:39:42] 
+=== Epoch 4/80 ===
+[01:39:42] Learning rate: 0.000100
+[01:39:43] Epoch 3 | Batch 0/518 | Loss: 2.6451
+[01:39:47] Epoch 3 | Batch 10/518 | Loss: 2.9344
+[01:39:51] Epoch 3 | Batch 20/518 | Loss: 2.8844
+[01:39:55] Epoch 3 | Batch 30/518 | Loss: 2.7568
+[01:39:59] Epoch 3 | Batch 40/518 | Loss: 2.8152
+[01:40:02] Epoch 3 | Batch 50/518 | Loss: 2.8619
+[01:40:06] Epoch 3 | Batch 60/518 | Loss: 2.8917
+[01:40:10] Epoch 3 | Batch 70/518 | Loss: 2.7047
+[01:40:14] Epoch 3 | Batch 80/518 | Loss: 2.6895
+[01:40:18] Epoch 3 | Batch 90/518 | Loss: 2.7475
+[01:40:22] Epoch 3 | Batch 100/518 | Loss: 2.8827
+[01:40:26] Epoch 3 | Batch 110/518 | Loss: 2.6813
+[01:40:30] Epoch 3 | Batch 120/518 | Loss: 2.7789
+[01:40:34] Epoch 3 | Batch 130/518 | Loss: 2.7908
+[01:40:38] Epoch 3 | Batch 140/518 | Loss: 2.7013
+[01:40:41] Epoch 3 | Batch 150/518 | Loss: 2.7111
+[01:40:45] Epoch 3 | Batch 160/518 | Loss: 3.1457
+[01:40:49] Epoch 3 | Batch 170/518 | Loss: 2.8479
+[01:40:53] Epoch 3 | Batch 180/518 | Loss: 3.3750
+[01:40:57] Epoch 3 | Batch 190/518 | Loss: 2.6937
+[01:41:01] Epoch 3 | Batch 200/518 | Loss: 2.5589
+[01:41:05] Epoch 3 | Batch 210/518 | Loss: 2.6253
+[01:41:09] Epoch 3 | Batch 220/518 | Loss: 2.7557
+[01:41:13] Epoch 3 | Batch 230/518 | Loss: 2.5991
+[01:41:16] Epoch 3 | Batch 240/518 | Loss: 2.8017
+[01:41:20] Epoch 3 | Batch 250/518 | Loss: 2.6364
+[01:41:24] Epoch 3 | Batch 260/518 | Loss: 2.7621
+[01:41:28] Epoch 3 | Batch 270/518 | Loss: 2.6685
+[01:41:32] Epoch 3 | Batch 280/518 | Loss: 2.4665
+[01:41:37] Epoch 3 | Batch 290/518 | Loss: 2.4470
+[01:41:41] Epoch 3 | Batch 300/518 | Loss: 2.6712
+[01:41:45] Epoch 3 | Batch 310/518 | Loss: 2.5890
+[01:41:49] Epoch 3 | Batch 320/518 | Loss: 2.7296
+[01:41:53] Epoch 3 | Batch 330/518 | Loss: 2.6574
+[01:41:58] Epoch 3 | Batch 340/518 | Loss: 2.7571
+[01:42:02] Epoch 3 | Batch 350/518 | Loss: 2.5657
+[01:42:05] Epoch 3 | Batch 360/518 | Loss: 2.9635
+[01:42:09] Epoch 3 | Batch 370/518 | Loss: 2.5878
+[01:42:15] Epoch 3 | Batch 380/518 | Loss: 2.6283
+[01:42:20] Epoch 3 | Batch 390/518 | Loss: 2.6636
+[01:42:25] Epoch 3 | Batch 400/518 | Loss: 2.8721
+[01:42:33] Epoch 3 | Batch 410/518 | Loss: 2.7119
+[01:42:41] Epoch 3 | Batch 420/518 | Loss: 2.5731
+[01:42:48] Epoch 3 | Batch 430/518 | Loss: 3.0379
+[01:42:56] Epoch 3 | Batch 440/518 | Loss: 2.6835
+[01:43:03] Epoch 3 | Batch 450/518 | Loss: 2.6618
+[01:43:10] Epoch 3 | Batch 460/518 | Loss: 2.5289
+[01:43:18] Epoch 3 | Batch 470/518 | Loss: 2.7219
+[01:43:25] Epoch 3 | Batch 480/518 | Loss: 2.6402
+[01:43:33] Epoch 3 | Batch 490/518 | Loss: 2.5546
+[01:43:41] Epoch 3 | Batch 500/518 | Loss: 2.6197
+[01:43:48] Epoch 3 | Batch 510/518 | Loss: 2.9348
+[01:43:54] Train Loss: 1.3557
+[01:44:35] Val Loss: 0.9839 | AUC: 0.8209 | IOU: 0.1387 | SIM: 0.5078 | MAE: 0.1115
+[01:44:35] 
+=== Epoch 5/80 ===
+[01:44:35] Learning rate: 0.000099
+[01:44:36] Epoch 4 | Batch 0/518 | Loss: 2.5745
+[01:44:45] Epoch 4 | Batch 10/518 | Loss: 3.0121
+[01:44:53] Epoch 4 | Batch 20/518 | Loss: 2.7484
+[01:45:00] Epoch 4 | Batch 30/518 | Loss: 2.5018
+[01:45:08] Epoch 4 | Batch 40/518 | Loss: 2.5573
+[01:45:15] Epoch 4 | Batch 50/518 | Loss: 2.7304
+[01:45:22] Epoch 4 | Batch 60/518 | Loss: 2.5360
+[01:45:30] Epoch 4 | Batch 70/518 | Loss: 2.6899
+[01:45:37] Epoch 4 | Batch 80/518 | Loss: 2.7198
+[01:45:45] Epoch 4 | Batch 90/518 | Loss: 2.6036
+[01:45:52] Epoch 4 | Batch 100/518 | Loss: 2.4145
+[01:46:00] Epoch 4 | Batch 110/518 | Loss: 2.7286
+[01:46:07] Epoch 4 | Batch 120/518 | Loss: 2.7091
+[01:46:15] Epoch 4 | Batch 130/518 | Loss: 2.2890
+[01:46:22] Epoch 4 | Batch 140/518 | Loss: 2.4171
+[01:46:30] Epoch 4 | Batch 150/518 | Loss: 2.7647
+[01:46:37] Epoch 4 | Batch 160/518 | Loss: 2.8576
+[01:46:44] Epoch 4 | Batch 170/518 | Loss: 2.5386
+[01:46:52] Epoch 4 | Batch 180/518 | Loss: 2.5047
+[01:47:00] Epoch 4 | Batch 190/518 | Loss: 2.4117
+[01:47:07] Epoch 4 | Batch 200/518 | Loss: 2.5642
+[01:47:15] Epoch 4 | Batch 210/518 | Loss: 2.5636
+[01:47:22] Epoch 4 | Batch 220/518 | Loss: 2.5677
+[01:47:30] Epoch 4 | Batch 230/518 | Loss: 2.9059
+[01:47:37] Epoch 4 | Batch 240/518 | Loss: 2.7391
+[01:47:42] Epoch 4 | Batch 250/518 | Loss: 2.4711
+[01:47:45] Epoch 4 | Batch 260/518 | Loss: 2.6091
+[01:47:49] Epoch 4 | Batch 270/518 | Loss: 2.7765
+[01:47:53] Epoch 4 | Batch 280/518 | Loss: 2.6812
+[01:47:57] Epoch 4 | Batch 290/518 | Loss: 2.5885
+[01:48:01] Epoch 4 | Batch 300/518 | Loss: 2.4981
+[01:48:05] Epoch 4 | Batch 310/518 | Loss: 2.6765
+[01:48:09] Epoch 4 | Batch 320/518 | Loss: 2.3465
+[01:48:13] Epoch 4 | Batch 330/518 | Loss: 2.6514
+[01:48:17] Epoch 4 | Batch 340/518 | Loss: 2.5239
+[01:48:20] Epoch 4 | Batch 350/518 | Loss: 2.4715
+[01:48:24] Epoch 4 | Batch 360/518 | Loss: 2.7594
+[01:48:28] Epoch 4 | Batch 370/518 | Loss: 2.6178
+[01:48:32] Epoch 4 | Batch 380/518 | Loss: 2.4701
+[01:48:36] Epoch 4 | Batch 390/518 | Loss: 3.0344
+[01:48:39] Epoch 4 | Batch 400/518 | Loss: 2.8124
+[01:48:43] Epoch 4 | Batch 410/518 | Loss: 2.6633
+[01:48:47] Epoch 4 | Batch 420/518 | Loss: 2.6297
+[01:48:51] Epoch 4 | Batch 430/518 | Loss: 2.5204
+[01:48:55] Epoch 4 | Batch 440/518 | Loss: 2.6349
+[01:48:59] Epoch 4 | Batch 450/518 | Loss: 2.3780
+[01:49:02] Epoch 4 | Batch 460/518 | Loss: 2.4563
+[01:49:06] Epoch 4 | Batch 470/518 | Loss: 2.4863
+[01:49:10] Epoch 4 | Batch 480/518 | Loss: 2.3627
+[01:49:14] Epoch 4 | Batch 490/518 | Loss: 2.6209
+[01:49:18] Epoch 4 | Batch 500/518 | Loss: 2.3912
+[01:49:21] Epoch 4 | Batch 510/518 | Loss: 2.5502
+[01:49:24] Train Loss: 1.3181
+[01:49:45] Val Loss: 0.9809 | AUC: 0.8186 | IOU: 0.1500 | SIM: 0.5122 | MAE: 0.1094
+[01:49:45] Breakpoint saved: 2026-3-17-1-25-Seen-model-5
+[01:49:45] 
+=== Epoch 6/80 ===
+[01:49:45] Learning rate: 0.000099
+[01:49:46] Epoch 5 | Batch 0/518 | Loss: 2.4955
+[01:49:50] Epoch 5 | Batch 10/518 | Loss: 2.4804
+[01:49:54] Epoch 5 | Batch 20/518 | Loss: 2.7724
+[01:49:58] Epoch 5 | Batch 30/518 | Loss: 2.6227
+[01:50:02] Epoch 5 | Batch 40/518 | Loss: 2.5905
+[01:50:06] Epoch 5 | Batch 50/518 | Loss: 2.6907
+[01:50:09] Epoch 5 | Batch 60/518 | Loss: 2.8216
+[01:50:13] Epoch 5 | Batch 70/518 | Loss: 2.4734
+[01:50:17] Epoch 5 | Batch 80/518 | Loss: 2.4063
+[01:50:21] Epoch 5 | Batch 90/518 | Loss: 2.4262
+[01:50:25] Epoch 5 | Batch 100/518 | Loss: 2.8377
+[01:50:28] Epoch 5 | Batch 110/518 | Loss: 2.8970
+[01:50:32] Epoch 5 | Batch 120/518 | Loss: 2.5763
+[01:50:36] Epoch 5 | Batch 130/518 | Loss: 2.6613
+[01:50:40] Epoch 5 | Batch 140/518 | Loss: 2.6866
+[01:50:43] Epoch 5 | Batch 150/518 | Loss: 2.5532
+[01:50:47] Epoch 5 | Batch 160/518 | Loss: 2.6393
+[01:50:51] Epoch 5 | Batch 170/518 | Loss: 2.5778
+[01:50:55] Epoch 5 | Batch 180/518 | Loss: 2.6063
+[01:50:58] Epoch 5 | Batch 190/518 | Loss: 2.3990
+[01:51:02] Epoch 5 | Batch 200/518 | Loss: 2.8166
+[01:51:06] Epoch 5 | Batch 210/518 | Loss: 2.8546
+[01:51:10] Epoch 5 | Batch 220/518 | Loss: 2.4533
+[01:51:14] Epoch 5 | Batch 230/518 | Loss: 2.4686
+[01:51:17] Epoch 5 | Batch 240/518 | Loss: 2.4822
+[01:51:21] Epoch 5 | Batch 250/518 | Loss: 2.6318
+[01:51:25] Epoch 5 | Batch 260/518 | Loss: 2.4704
+[01:51:29] Epoch 5 | Batch 270/518 | Loss: 2.9099
+[01:51:33] Epoch 5 | Batch 280/518 | Loss: 2.6026
+[01:51:36] Epoch 5 | Batch 290/518 | Loss: 2.6356
+[01:51:40] Epoch 5 | Batch 300/518 | Loss: 2.6505
+[01:51:44] Epoch 5 | Batch 310/518 | Loss: 2.4377
+[01:51:48] Epoch 5 | Batch 320/518 | Loss: 2.4746
+[01:51:52] Epoch 5 | Batch 330/518 | Loss: 2.4591
+[01:51:55] Epoch 5 | Batch 340/518 | Loss: 2.4088
+[01:51:59] Epoch 5 | Batch 350/518 | Loss: 2.6599
+[01:52:03] Epoch 5 | Batch 360/518 | Loss: 2.6552
+[01:52:07] Epoch 5 | Batch 370/518 | Loss: 2.5368
+[01:52:11] Epoch 5 | Batch 380/518 | Loss: 2.7413
+[01:52:14] Epoch 5 | Batch 390/518 | Loss: 2.7797
+[01:52:18] Epoch 5 | Batch 400/518 | Loss: 2.9164
+[01:52:22] Epoch 5 | Batch 410/518 | Loss: 2.6764
+[01:52:26] Epoch 5 | Batch 420/518 | Loss: 2.7846
+[01:52:29] Epoch 5 | Batch 430/518 | Loss: 2.4123
+[01:52:33] Epoch 5 | Batch 440/518 | Loss: 2.7497
+[01:52:37] Epoch 5 | Batch 450/518 | Loss: 2.6297
+[01:52:41] Epoch 5 | Batch 460/518 | Loss: 3.0151
+[01:52:45] Epoch 5 | Batch 470/518 | Loss: 2.4677
+[01:52:49] Epoch 5 | Batch 480/518 | Loss: 2.8798
+[01:52:52] Epoch 5 | Batch 490/518 | Loss: 2.6288
+[01:52:56] Epoch 5 | Batch 500/518 | Loss: 2.5948
+[01:53:01] Epoch 5 | Batch 510/518 | Loss: 3.1538
+[01:53:03] Train Loss: 1.3089
+[01:53:24] Val Loss: 0.9828 | AUC: 0.8154 | IOU: 0.1452 | SIM: 0.5127 | MAE: 0.1066
+[01:53:24] 
+=== Epoch 7/80 ===
+[01:53:24] Learning rate: 0.000099
+[01:53:25] Epoch 6 | Batch 0/518 | Loss: 2.5002
+[01:53:29] Epoch 6 | Batch 10/518 | Loss: 2.7119
+[01:53:34] Epoch 6 | Batch 20/518 | Loss: 2.3693
+[01:53:37] Epoch 6 | Batch 30/518 | Loss: 2.3285
+[01:53:41] Epoch 6 | Batch 40/518 | Loss: 2.4669
+[01:53:45] Epoch 6 | Batch 50/518 | Loss: 2.9905
+[01:53:49] Epoch 6 | Batch 60/518 | Loss: 2.5490
+[01:53:52] Epoch 6 | Batch 70/518 | Loss: 2.7490
+[01:53:56] Epoch 6 | Batch 80/518 | Loss: 2.4419
+[01:54:00] Epoch 6 | Batch 90/518 | Loss: 2.5308
+[01:54:04] Epoch 6 | Batch 100/518 | Loss: 2.5073
+[01:54:08] Epoch 6 | Batch 110/518 | Loss: 2.8449
+[01:54:11] Epoch 6 | Batch 120/518 | Loss: 2.7529
+[01:54:15] Epoch 6 | Batch 130/518 | Loss: 2.4397
+[01:54:19] Epoch 6 | Batch 140/518 | Loss: 2.7292
+[01:54:23] Epoch 6 | Batch 150/518 | Loss: 2.6805
+[01:54:27] Epoch 6 | Batch 160/518 | Loss: 2.7456
+[01:54:30] Epoch 6 | Batch 170/518 | Loss: 2.4688
+[01:54:34] Epoch 6 | Batch 180/518 | Loss: 2.7529
+[01:54:38] Epoch 6 | Batch 190/518 | Loss: 2.6892
+[01:54:42] Epoch 6 | Batch 200/518 | Loss: 3.1719
+[01:54:46] Epoch 6 | Batch 210/518 | Loss: 2.4164
+[01:54:50] Epoch 6 | Batch 220/518 | Loss: 2.4071
+[01:54:54] Epoch 6 | Batch 230/518 | Loss: 2.7980
+[01:54:57] Epoch 6 | Batch 240/518 | Loss: 2.8667
+[01:55:01] Epoch 6 | Batch 250/518 | Loss: 2.4167
+[01:55:05] Epoch 6 | Batch 260/518 | Loss: 2.4024
+[01:55:09] Epoch 6 | Batch 270/518 | Loss: 2.3043
+[01:55:13] Epoch 6 | Batch 280/518 | Loss: 2.5922
+[01:55:16] Epoch 6 | Batch 290/518 | Loss: 2.7422
+[01:55:20] Epoch 6 | Batch 300/518 | Loss: 2.3172
+[01:55:24] Epoch 6 | Batch 310/518 | Loss: 2.4634
+[01:55:28] Epoch 6 | Batch 320/518 | Loss: 2.5250
+[01:55:32] Epoch 6 | Batch 330/518 | Loss: 2.4243
+[01:55:36] Epoch 6 | Batch 340/518 | Loss: 2.5499
+[01:55:39] Epoch 6 | Batch 350/518 | Loss: 2.4827
+[01:55:43] Epoch 6 | Batch 360/518 | Loss: 2.5810
+[01:55:47] Epoch 6 | Batch 370/518 | Loss: 2.6556
+[01:55:51] Epoch 6 | Batch 380/518 | Loss: 2.4870
+[01:55:55] Epoch 6 | Batch 390/518 | Loss: 2.4861
+[01:55:59] Epoch 6 | Batch 400/518 | Loss: 2.4526
+[01:56:03] Epoch 6 | Batch 410/518 | Loss: 2.3676
+[01:56:06] Epoch 6 | Batch 420/518 | Loss: 2.3872
+[01:56:10] Epoch 6 | Batch 430/518 | Loss: 2.7159
+[01:56:14] Epoch 6 | Batch 440/518 | Loss: 2.8806
+[01:56:18] Epoch 6 | Batch 450/518 | Loss: 2.5010
+[01:56:22] Epoch 6 | Batch 460/518 | Loss: 2.6044
+[01:56:26] Epoch 6 | Batch 470/518 | Loss: 2.5569
+[01:56:29] Epoch 6 | Batch 480/518 | Loss: 2.7312
+[01:56:33] Epoch 6 | Batch 490/518 | Loss: 2.4655
+[01:56:37] Epoch 6 | Batch 500/518 | Loss: 2.4779
+[01:56:40] Epoch 6 | Batch 510/518 | Loss: 2.8205
+[01:56:43] Train Loss: 1.2902
+[01:57:04] Val Loss: 0.9808 | AUC: 0.8154 | IOU: 0.1410 | SIM: 0.5104 | MAE: 0.1049
+[01:57:04] 
+=== Epoch 8/80 ===
+[01:57:04] Learning rate: 0.000098
+[01:57:05] Epoch 7 | Batch 0/518 | Loss: 2.4000
+[01:57:09] Epoch 7 | Batch 10/518 | Loss: 2.4920
+[01:57:13] Epoch 7 | Batch 20/518 | Loss: 2.3302
+[01:57:17] Epoch 7 | Batch 30/518 | Loss: 2.4859
+[01:57:21] Epoch 7 | Batch 40/518 | Loss: 2.4022
+[01:57:25] Epoch 7 | Batch 50/518 | Loss: 2.4910
+[01:57:28] Epoch 7 | Batch 60/518 | Loss: 2.5693
+[01:57:32] Epoch 7 | Batch 70/518 | Loss: 2.6231
+[01:57:36] Epoch 7 | Batch 80/518 | Loss: 2.2186
+[01:57:40] Epoch 7 | Batch 90/518 | Loss: 2.4925
+[01:57:43] Epoch 7 | Batch 100/518 | Loss: 2.3902
+[01:57:47] Epoch 7 | Batch 110/518 | Loss: 2.3766
+[01:57:51] Epoch 7 | Batch 120/518 | Loss: 2.3550
+[01:57:55] Epoch 7 | Batch 130/518 | Loss: 2.5818
+[01:57:59] Epoch 7 | Batch 140/518 | Loss: 2.3354
+[01:58:02] Epoch 7 | Batch 150/518 | Loss: 2.4087
+[01:58:06] Epoch 7 | Batch 160/518 | Loss: 2.9411
+[01:58:10] Epoch 7 | Batch 170/518 | Loss: 2.4890
+[01:58:14] Epoch 7 | Batch 180/518 | Loss: 2.4215
+[01:58:18] Epoch 7 | Batch 190/518 | Loss: 2.8043
+[01:58:22] Epoch 7 | Batch 200/518 | Loss: 2.6352
+[01:58:26] Epoch 7 | Batch 210/518 | Loss: 2.4465
+[01:58:30] Epoch 7 | Batch 220/518 | Loss: 2.6161
+[01:58:34] Epoch 7 | Batch 230/518 | Loss: 2.6339
+[01:58:37] Epoch 7 | Batch 240/518 | Loss: 2.6605
+[01:58:41] Epoch 7 | Batch 250/518 | Loss: 2.4324
+[01:58:45] Epoch 7 | Batch 260/518 | Loss: 2.4859
+[01:58:49] Epoch 7 | Batch 270/518 | Loss: 2.3917
+[01:58:53] Epoch 7 | Batch 280/518 | Loss: 2.5320
+[01:58:57] Epoch 7 | Batch 290/518 | Loss: 2.8126
+[01:59:01] Epoch 7 | Batch 300/518 | Loss: 2.5878
+[01:59:04] Epoch 7 | Batch 310/518 | Loss: 2.5699
+[01:59:08] Epoch 7 | Batch 320/518 | Loss: 2.5584
+[01:59:12] Epoch 7 | Batch 330/518 | Loss: 2.7671
+[01:59:16] Epoch 7 | Batch 340/518 | Loss: 2.2971
+[01:59:20] Epoch 7 | Batch 350/518 | Loss: 2.6103
+[01:59:24] Epoch 7 | Batch 360/518 | Loss: 2.4102
+[01:59:28] Epoch 7 | Batch 370/518 | Loss: 2.6554
+[01:59:33] Epoch 7 | Batch 380/518 | Loss: 2.8117
+[01:59:38] Epoch 7 | Batch 390/518 | Loss: 2.5879
+[01:59:43] Epoch 7 | Batch 400/518 | Loss: 2.5561
+[01:59:47] Epoch 7 | Batch 410/518 | Loss: 2.3965
+[01:59:52] Epoch 7 | Batch 420/518 | Loss: 2.8843
+[01:59:56] Epoch 7 | Batch 430/518 | Loss: 2.6779
+[02:00:00] Epoch 7 | Batch 440/518 | Loss: 2.3547
+[02:00:04] Epoch 7 | Batch 450/518 | Loss: 2.3557
+[02:00:07] Epoch 7 | Batch 460/518 | Loss: 2.3129
+[02:00:11] Epoch 7 | Batch 470/518 | Loss: 2.3517
+[02:00:15] Epoch 7 | Batch 480/518 | Loss: 2.8272
+[02:00:19] Epoch 7 | Batch 490/518 | Loss: 2.3295
+[02:00:23] Epoch 7 | Batch 500/518 | Loss: 2.8274
+[02:00:28] Epoch 7 | Batch 510/518 | Loss: 2.7422
+[02:00:32] Train Loss: 1.2757
+[02:00:57] Val Loss: 0.9765 | AUC: 0.8240 | IOU: 0.1426 | SIM: 0.5191 | MAE: 0.1071
+[02:00:57] 
+=== Epoch 9/80 ===
+[02:00:57] Learning rate: 0.000098
+[02:00:57] Epoch 8 | Batch 0/518 | Loss: 2.4598
+[02:01:01] Epoch 8 | Batch 10/518 | Loss: 2.4894
+[02:01:04] Epoch 8 | Batch 20/518 | Loss: 2.6632
+[02:01:07] Epoch 8 | Batch 30/518 | Loss: 2.9218
+[02:01:11] Epoch 8 | Batch 40/518 | Loss: 2.4077
+[02:01:14] Epoch 8 | Batch 50/518 | Loss: 2.3034
+[02:01:18] Epoch 8 | Batch 60/518 | Loss: 2.6332
+[02:01:21] Epoch 8 | Batch 70/518 | Loss: 2.4869
+[02:01:25] Epoch 8 | Batch 80/518 | Loss: 2.6633
+[02:01:28] Epoch 8 | Batch 90/518 | Loss: 2.3395
+[02:01:32] Epoch 8 | Batch 100/518 | Loss: 2.4902
+[02:01:35] Epoch 8 | Batch 110/518 | Loss: 2.8121
+[02:01:38] Epoch 8 | Batch 120/518 | Loss: 2.4437
+[02:01:42] Epoch 8 | Batch 130/518 | Loss: 2.5430
+[02:01:45] Epoch 8 | Batch 140/518 | Loss: 2.6458
+[02:01:49] Epoch 8 | Batch 150/518 | Loss: 2.5917
+[02:01:52] Epoch 8 | Batch 160/518 | Loss: 2.4277
+[02:01:55] Epoch 8 | Batch 170/518 | Loss: 2.3482
+[02:01:59] Epoch 8 | Batch 180/518 | Loss: 2.8280
+[02:02:02] Epoch 8 | Batch 190/518 | Loss: 2.5749
+[02:02:06] Epoch 8 | Batch 200/518 | Loss: 2.3404
+[02:02:09] Epoch 8 | Batch 210/518 | Loss: 2.8463
+[02:02:12] Epoch 8 | Batch 220/518 | Loss: 2.5451
+[02:02:16] Epoch 8 | Batch 230/518 | Loss: 2.6947
+[02:02:19] Epoch 8 | Batch 240/518 | Loss: 2.6544
+[02:02:22] Epoch 8 | Batch 250/518 | Loss: 2.6349
+[02:02:26] Epoch 8 | Batch 260/518 | Loss: 2.6670
+[02:02:29] Epoch 8 | Batch 270/518 | Loss: 2.2103
+[02:02:33] Epoch 8 | Batch 280/518 | Loss: 2.3272
+[02:02:36] Epoch 8 | Batch 290/518 | Loss: 2.4468
+[02:02:40] Epoch 8 | Batch 300/518 | Loss: 2.5973
+[02:02:43] Epoch 8 | Batch 310/518 | Loss: 2.6792
+[02:02:47] Epoch 8 | Batch 320/518 | Loss: 2.5544
+[02:02:53] Epoch 8 | Batch 330/518 | Loss: 2.5060
+[02:03:00] Epoch 8 | Batch 340/518 | Loss: 2.8303
+[02:03:08] Epoch 8 | Batch 350/518 | Loss: 2.4244
+[02:03:15] Epoch 8 | Batch 360/518 | Loss: 2.5994
+[02:03:22] Epoch 8 | Batch 370/518 | Loss: 2.5084
+[02:03:30] Epoch 8 | Batch 380/518 | Loss: 2.3780
+[02:03:37] Epoch 8 | Batch 390/518 | Loss: 2.8070
+[02:03:44] Epoch 8 | Batch 400/518 | Loss: 2.6336
+[02:03:52] Epoch 8 | Batch 410/518 | Loss: 2.3737
+[02:03:59] Epoch 8 | Batch 420/518 | Loss: 2.4996
+[02:04:07] Epoch 8 | Batch 430/518 | Loss: 2.4090
+[02:04:15] Epoch 8 | Batch 440/518 | Loss: 2.3909
+[02:04:23] Epoch 8 | Batch 450/518 | Loss: 2.5795
+[02:04:30] Epoch 8 | Batch 460/518 | Loss: 2.7416
+[02:04:37] Epoch 8 | Batch 470/518 | Loss: 2.8330
+[02:04:45] Epoch 8 | Batch 480/518 | Loss: 2.5201
+[02:04:53] Epoch 8 | Batch 490/518 | Loss: 2.4491
+[02:05:00] Epoch 8 | Batch 500/518 | Loss: 2.3628
+[02:05:09] Epoch 8 | Batch 510/518 | Loss: 2.7311
+[02:05:14] Train Loss: 1.2663
+[02:05:55] Val Loss: 0.9781 | AUC: 0.8197 | IOU: 0.1626 | SIM: 0.5174 | MAE: 0.1084
+[02:05:55] 
+=== Epoch 10/80 ===
+[02:05:55] Learning rate: 0.000097
+[02:05:56] Epoch 9 | Batch 0/518 | Loss: 2.4109
+[02:06:03] Epoch 9 | Batch 10/518 | Loss: 2.6176
+[02:06:11] Epoch 9 | Batch 20/518 | Loss: 2.5244
+[02:06:19] Epoch 9 | Batch 30/518 | Loss: 2.3681
+[02:06:26] Epoch 9 | Batch 40/518 | Loss: 2.3019
+[02:06:34] Epoch 9 | Batch 50/518 | Loss: 2.5742
+[02:06:41] Epoch 9 | Batch 60/518 | Loss: 2.2669
+[02:06:48] Epoch 9 | Batch 70/518 | Loss: 2.5086
+[02:06:56] Epoch 9 | Batch 80/518 | Loss: 2.6623
+[02:07:04] Epoch 9 | Batch 90/518 | Loss: 2.6729
+[02:07:11] Epoch 9 | Batch 100/518 | Loss: 2.4954
+[02:07:19] Epoch 9 | Batch 110/518 | Loss: 2.4200
+[02:07:26] Epoch 9 | Batch 120/518 | Loss: 2.3582
+[02:07:33] Epoch 9 | Batch 130/518 | Loss: 2.5533
+[02:07:41] Epoch 9 | Batch 140/518 | Loss: 2.4074
+[02:07:48] Epoch 9 | Batch 150/518 | Loss: 2.3868
+[02:07:55] Epoch 9 | Batch 160/518 | Loss: 2.6126
+[02:08:03] Epoch 9 | Batch 170/518 | Loss: 2.4439
+[02:08:11] Epoch 9 | Batch 180/518 | Loss: 2.5629
+[02:08:18] Epoch 9 | Batch 190/518 | Loss: 2.5825
+[02:08:26] Epoch 9 | Batch 200/518 | Loss: 2.3289
+[02:08:33] Epoch 9 | Batch 210/518 | Loss: 2.3816
+[02:08:41] Epoch 9 | Batch 220/518 | Loss: 2.8383
+[02:08:49] Epoch 9 | Batch 230/518 | Loss: 2.6194
+[02:08:56] Epoch 9 | Batch 240/518 | Loss: 2.3709
+[02:09:04] Epoch 9 | Batch 250/518 | Loss: 2.4112
+[02:09:11] Epoch 9 | Batch 260/518 | Loss: 2.5057
+[02:09:19] Epoch 9 | Batch 270/518 | Loss: 2.4341
+[02:09:27] Epoch 9 | Batch 280/518 | Loss: 2.6800
+[02:09:34] Epoch 9 | Batch 290/518 | Loss: 2.3791
+[02:09:41] Epoch 9 | Batch 300/518 | Loss: 2.4455
+[02:09:49] Epoch 9 | Batch 310/518 | Loss: 2.5041
+[02:09:56] Epoch 9 | Batch 320/518 | Loss: 2.7610
+[02:10:04] Epoch 9 | Batch 330/518 | Loss: 2.2533
+[02:10:11] Epoch 9 | Batch 340/518 | Loss: 2.6430
+[02:10:18] Epoch 9 | Batch 350/518 | Loss: 2.3062
+[02:10:22] Epoch 9 | Batch 360/518 | Loss: 2.4748
+[02:10:26] Epoch 9 | Batch 370/518 | Loss: 2.5634
+[02:10:30] Epoch 9 | Batch 380/518 | Loss: 2.3822
+[02:10:33] Epoch 9 | Batch 390/518 | Loss: 2.5286
+[02:10:37] Epoch 9 | Batch 400/518 | Loss: 2.2287
+[02:10:42] Epoch 9 | Batch 410/518 | Loss: 2.9686
+[02:10:46] Epoch 9 | Batch 420/518 | Loss: 2.5574
+[02:10:50] Epoch 9 | Batch 430/518 | Loss: 2.5652
+[02:10:54] Epoch 9 | Batch 440/518 | Loss: 2.6525
+[02:10:57] Epoch 9 | Batch 450/518 | Loss: 2.5557
+[02:11:01] Epoch 9 | Batch 460/518 | Loss: 2.5626
+[02:11:05] Epoch 9 | Batch 470/518 | Loss: 2.7645
+[02:11:09] Epoch 9 | Batch 480/518 | Loss: 2.5150
+[02:11:13] Epoch 9 | Batch 490/518 | Loss: 2.2788
+[02:11:17] Epoch 9 | Batch 500/518 | Loss: 2.3122
+[02:11:20] Epoch 9 | Batch 510/518 | Loss: 2.4782
+[02:11:23] Train Loss: 1.2537
+[02:11:44] Val Loss: 0.9761 | AUC: 0.8173 | IOU: 0.1591 | SIM: 0.5158 | MAE: 0.1077
+[02:11:44] Breakpoint saved: 2026-3-17-1-25-Seen-model-10
+[02:11:44] 
+=== Epoch 11/80 ===
+[02:11:44] Learning rate: 0.000096
+[02:11:45] Epoch 10 | Batch 0/518 | Loss: 2.7291
+[02:11:49] Epoch 10 | Batch 10/518 | Loss: 2.4298
+[02:11:53] Epoch 10 | Batch 20/518 | Loss: 2.2989
+[02:11:56] Epoch 10 | Batch 30/518 | Loss: 2.5539
+[02:12:00] Epoch 10 | Batch 40/518 | Loss: 2.5458
+[02:12:04] Epoch 10 | Batch 50/518 | Loss: 2.4439
+[02:12:08] Epoch 10 | Batch 60/518 | Loss: 2.4460
+[02:12:12] Epoch 10 | Batch 70/518 | Loss: 2.3752
+[02:12:16] Epoch 10 | Batch 80/518 | Loss: 2.3599
+[02:12:20] Epoch 10 | Batch 90/518 | Loss: 2.2691
+[02:12:24] Epoch 10 | Batch 100/518 | Loss: 2.3033
+[02:12:27] Epoch 10 | Batch 110/518 | Loss: 2.9478
+[02:12:31] Epoch 10 | Batch 120/518 | Loss: 2.3195
+[02:12:35] Epoch 10 | Batch 130/518 | Loss: 2.4073
+[02:12:39] Epoch 10 | Batch 140/518 | Loss: 2.2435
+[02:12:43] Epoch 10 | Batch 150/518 | Loss: 2.3970
+[02:12:47] Epoch 10 | Batch 160/518 | Loss: 2.4152
+[02:12:51] Epoch 10 | Batch 170/518 | Loss: 2.2878
+[02:12:55] Epoch 10 | Batch 180/518 | Loss: 2.6496
+[02:12:59] Epoch 10 | Batch 190/518 | Loss: 2.9781
+[02:13:03] Epoch 10 | Batch 200/518 | Loss: 2.4245
+[02:13:07] Epoch 10 | Batch 210/518 | Loss: 2.4645
+[02:13:10] Epoch 10 | Batch 220/518 | Loss: 2.2575
+[02:13:14] Epoch 10 | Batch 230/518 | Loss: 2.7607
+[02:13:18] Epoch 10 | Batch 240/518 | Loss: 2.5094
+[02:13:22] Epoch 10 | Batch 250/518 | Loss: 2.3438
+[02:13:26] Epoch 10 | Batch 260/518 | Loss: 2.3415
+[02:13:30] Epoch 10 | Batch 270/518 | Loss: 3.0013
+[02:13:34] Epoch 10 | Batch 280/518 | Loss: 2.5946
+[02:13:38] Epoch 10 | Batch 290/518 | Loss: 2.4652
+[02:13:41] Epoch 10 | Batch 300/518 | Loss: 2.6023
+[02:13:45] Epoch 10 | Batch 310/518 | Loss: 2.3604
+[02:13:49] Epoch 10 | Batch 320/518 | Loss: 2.4093
+[02:13:53] Epoch 10 | Batch 330/518 | Loss: 2.3031
+[02:13:57] Epoch 10 | Batch 340/518 | Loss: 2.7752
+[02:14:01] Epoch 10 | Batch 350/518 | Loss: 2.3811
+[02:14:05] Epoch 10 | Batch 360/518 | Loss: 2.1700
+[02:14:08] Epoch 10 | Batch 370/518 | Loss: 2.4625
+[02:14:12] Epoch 10 | Batch 380/518 | Loss: 2.3512
+[02:14:16] Epoch 10 | Batch 390/518 | Loss: 2.4890
+[02:14:20] Epoch 10 | Batch 400/518 | Loss: 2.3128
+[02:14:23] Epoch 10 | Batch 410/518 | Loss: 2.7903
+[02:14:27] Epoch 10 | Batch 420/518 | Loss: 2.5232
+[02:14:31] Epoch 10 | Batch 430/518 | Loss: 2.3361
+[02:14:35] Epoch 10 | Batch 440/518 | Loss: 2.4166
+[02:14:39] Epoch 10 | Batch 450/518 | Loss: 2.5740
+[02:14:43] Epoch 10 | Batch 460/518 | Loss: 2.3262
+[02:14:46] Epoch 10 | Batch 470/518 | Loss: 2.5101
+[02:14:51] Epoch 10 | Batch 480/518 | Loss: 2.5631
+[02:14:54] Epoch 10 | Batch 490/518 | Loss: 2.6182
+[02:14:57] Epoch 10 | Batch 500/518 | Loss: 2.3124
+[02:15:01] Epoch 10 | Batch 510/518 | Loss: 2.4416
+[02:15:03] Train Loss: 1.2354
+[02:15:23] Val Loss: 0.9748 | AUC: 0.8155 | IOU: 0.1592 | SIM: 0.5205 | MAE: 0.1066
+[02:15:23] 
+=== Epoch 12/80 ===
+[02:15:23] Learning rate: 0.000095
+[02:15:23] Epoch 11 | Batch 0/518 | Loss: 2.3988
+[02:15:27] Epoch 11 | Batch 10/518 | Loss: 2.4354
+[02:15:30] Epoch 11 | Batch 20/518 | Loss: 2.2313
+[02:15:34] Epoch 11 | Batch 30/518 | Loss: 2.4712
+[02:15:37] Epoch 11 | Batch 40/518 | Loss: 2.3244
+[02:15:40] Epoch 11 | Batch 50/518 | Loss: 2.5628
+[02:15:44] Epoch 11 | Batch 60/518 | Loss: 2.4873
+[02:15:48] Epoch 11 | Batch 70/518 | Loss: 2.3388
+[02:15:52] Epoch 11 | Batch 80/518 | Loss: 2.3644
+[02:15:56] Epoch 11 | Batch 90/518 | Loss: 2.8431
+[02:15:59] Epoch 11 | Batch 100/518 | Loss: 2.2517
+[02:16:03] Epoch 11 | Batch 110/518 | Loss: 2.5142
+[02:16:07] Epoch 11 | Batch 120/518 | Loss: 2.6800
+[02:16:11] Epoch 11 | Batch 130/518 | Loss: 2.5070
+[02:16:15] Epoch 11 | Batch 140/518 | Loss: 2.6106
+[02:16:19] Epoch 11 | Batch 150/518 | Loss: 2.2260
+[02:16:23] Epoch 11 | Batch 160/518 | Loss: 2.6933
+[02:16:27] Epoch 11 | Batch 170/518 | Loss: 2.5240
+[02:16:32] Epoch 11 | Batch 180/518 | Loss: 2.3564
+[02:16:36] Epoch 11 | Batch 190/518 | Loss: 2.7586
+[02:16:40] Epoch 11 | Batch 200/518 | Loss: 2.5575
+[02:16:45] Epoch 11 | Batch 210/518 | Loss: 2.3390
+[02:16:49] Epoch 11 | Batch 220/518 | Loss: 2.6156
+[02:16:53] Epoch 11 | Batch 230/518 | Loss: 2.4562
+[02:16:58] Epoch 11 | Batch 240/518 | Loss: 2.3153
+[02:17:02] Epoch 11 | Batch 250/518 | Loss: 2.2375
+[02:17:06] Epoch 11 | Batch 260/518 | Loss: 2.3176
+[02:17:10] Epoch 11 | Batch 270/518 | Loss: 2.3364
+[02:17:14] Epoch 11 | Batch 280/518 | Loss: 2.4595
+[02:17:19] Epoch 11 | Batch 290/518 | Loss: 2.4583
+[02:17:23] Epoch 11 | Batch 300/518 | Loss: 2.5749
+[02:17:27] Epoch 11 | Batch 310/518 | Loss: 2.6453
+[02:17:31] Epoch 11 | Batch 320/518 | Loss: 2.4968
+[02:17:35] Epoch 11 | Batch 330/518 | Loss: 2.3644
+[02:17:39] Epoch 11 | Batch 340/518 | Loss: 2.4367
+[02:17:43] Epoch 11 | Batch 350/518 | Loss: 2.5429
+[02:17:47] Epoch 11 | Batch 360/518 | Loss: 2.4092
+[02:17:50] Epoch 11 | Batch 370/518 | Loss: 2.1586
+[02:17:54] Epoch 11 | Batch 380/518 | Loss: 2.4847
+[02:17:58] Epoch 11 | Batch 390/518 | Loss: 2.6907
+[02:18:02] Epoch 11 | Batch 400/518 | Loss: 2.1903
+[02:18:06] Epoch 11 | Batch 410/518 | Loss: 2.6374
+[02:18:10] Epoch 11 | Batch 420/518 | Loss: 2.6512
+[02:18:14] Epoch 11 | Batch 430/518 | Loss: 2.9152
+[02:18:18] Epoch 11 | Batch 440/518 | Loss: 2.7438
+[02:18:22] Epoch 11 | Batch 450/518 | Loss: 2.2998
+[02:18:25] Epoch 11 | Batch 460/518 | Loss: 2.4675
+[02:18:29] Epoch 11 | Batch 470/518 | Loss: 2.2700
+[02:18:33] Epoch 11 | Batch 480/518 | Loss: 2.2817
+[02:18:37] Epoch 11 | Batch 490/518 | Loss: 2.2716
+[02:18:41] Epoch 11 | Batch 500/518 | Loss: 2.4488
+[02:18:45] Epoch 11 | Batch 510/518 | Loss: 2.4973
+[02:18:47] Train Loss: 1.2341
+[02:19:09] Val Loss: 0.9733 | AUC: 0.8230 | IOU: 0.1551 | SIM: 0.5227 | MAE: 0.1041
+[02:19:09] 
+=== Epoch 13/80 ===
+[02:19:09] Learning rate: 0.000095
+[02:19:09] Epoch 12 | Batch 0/518 | Loss: 2.2594
+[02:19:13] Epoch 12 | Batch 10/518 | Loss: 2.2140
+[02:19:16] Epoch 12 | Batch 20/518 | Loss: 2.5569
+[02:19:20] Epoch 12 | Batch 30/518 | Loss: 2.5355
+[02:19:23] Epoch 12 | Batch 40/518 | Loss: 2.3217
+[02:19:27] Epoch 12 | Batch 50/518 | Loss: 2.3261
+[02:19:30] Epoch 12 | Batch 60/518 | Loss: 2.3921
+[02:19:34] Epoch 12 | Batch 70/518 | Loss: 2.1558
+[02:19:37] Epoch 12 | Batch 80/518 | Loss: 2.5038
+[02:19:41] Epoch 12 | Batch 90/518 | Loss: 2.5292
+[02:19:44] Epoch 12 | Batch 100/518 | Loss: 2.4880
+[02:19:48] Epoch 12 | Batch 110/518 | Loss: 2.7177
+[02:19:51] Epoch 12 | Batch 120/518 | Loss: 2.5003
+[02:19:55] Epoch 12 | Batch 130/518 | Loss: 2.5243
+[02:19:58] Epoch 12 | Batch 140/518 | Loss: 2.6869
+[02:20:01] Epoch 12 | Batch 150/518 | Loss: 2.2769
+[02:20:05] Epoch 12 | Batch 160/518 | Loss: 2.4580
+[02:20:08] Epoch 12 | Batch 170/518 | Loss: 2.1058
+[02:20:12] Epoch 12 | Batch 180/518 | Loss: 2.4760
+[02:20:15] Epoch 12 | Batch 190/518 | Loss: 3.4682
+[02:20:18] Epoch 12 | Batch 200/518 | Loss: 2.4064
+[02:20:22] Epoch 12 | Batch 210/518 | Loss: 2.3582
+[02:20:25] Epoch 12 | Batch 220/518 | Loss: 2.6205
+[02:20:29] Epoch 12 | Batch 230/518 | Loss: 2.4390
+[02:20:32] Epoch 12 | Batch 240/518 | Loss: 2.4332
+[02:20:35] Epoch 12 | Batch 250/518 | Loss: 2.5526
+[02:20:39] Epoch 12 | Batch 260/518 | Loss: 2.3896
+[02:20:42] Epoch 12 | Batch 270/518 | Loss: 2.3382
+[02:20:46] Epoch 12 | Batch 280/518 | Loss: 2.2805
+[02:20:49] Epoch 12 | Batch 290/518 | Loss: 2.3555
+[02:20:52] Epoch 12 | Batch 300/518 | Loss: 2.5457
+[02:20:56] Epoch 12 | Batch 310/518 | Loss: 2.5429
+[02:20:59] Epoch 12 | Batch 320/518 | Loss: 2.6603
+[02:21:03] Epoch 12 | Batch 330/518 | Loss: 2.5311
+[02:21:06] Epoch 12 | Batch 340/518 | Loss: 2.4251
+[02:21:10] Epoch 12 | Batch 350/518 | Loss: 2.2423
+[02:21:13] Epoch 12 | Batch 360/518 | Loss: 2.6557
+[02:21:16] Epoch 12 | Batch 370/518 | Loss: 2.4936
+[02:21:20] Epoch 12 | Batch 380/518 | Loss: 2.7072
+[02:21:23] Epoch 12 | Batch 390/518 | Loss: 2.3544
+[02:21:27] Epoch 12 | Batch 400/518 | Loss: 2.2881
+[02:21:30] Epoch 12 | Batch 410/518 | Loss: 2.1905
+[02:21:33] Epoch 12 | Batch 420/518 | Loss: 2.2363
+[02:21:37] Epoch 12 | Batch 430/518 | Loss: 2.6575
+[02:21:40] Epoch 12 | Batch 440/518 | Loss: 2.6644
+[02:21:44] Epoch 12 | Batch 450/518 | Loss: 2.3973
+[02:21:47] Epoch 12 | Batch 460/518 | Loss: 2.4014
+[02:21:50] Epoch 12 | Batch 470/518 | Loss: 2.3860
+[02:21:54] Epoch 12 | Batch 480/518 | Loss: 2.5377
+[02:21:57] Epoch 12 | Batch 490/518 | Loss: 2.2837
+[02:22:01] Epoch 12 | Batch 500/518 | Loss: 2.2780
+[02:22:04] Epoch 12 | Batch 510/518 | Loss: 2.8716
+[02:22:07] Train Loss: 1.2162

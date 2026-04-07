@@ -1,0 +1,66 @@
+[02:38:31] Using device: cuda:0
+[02:38:31] Loading training data...
+[02:38:31] Training samples: 4150
+[02:38:31] Loading validation data...
+[02:38:31] Validation samples: 1012
+[02:38:31] Initializing model...
+[02:38:31] Model initialized on cuda:0
+[02:38:31] 
+=== Epoch 1/80 ===
+[02:38:31] Learning rate: 0.000100
+[02:38:33] Epoch 0 | Batch 0/1037 | Loss: 5.0295
+[02:38:38] Epoch 0 | Batch 10/1037 | Loss: 4.7015
+[02:38:45] Epoch 0 | Batch 20/1037 | Loss: 4.4810
+[02:38:48] Training interrupted
+[02:38:48] 
+Training stopped - checkpoints preserved
+[02:38:59] Using device: cuda:0
+[02:38:59] Loading training data...
+[02:38:59] Training samples: 4150
+[02:38:59] Loading validation data...
+[02:38:59] Validation samples: 1012
+[02:38:59] Initializing model...
+[02:38:59] Model initialized on cuda:0
+[02:38:59] 
+=== Epoch 1/80 ===
+[02:38:59] Learning rate: 0.000100
+[02:39:01] ERROR: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 31.36 GiB of which 123.75 MiB is free. Including non-PyTorch memory, this process has 14.72 GiB memory in use. Process 30792 has 16.50 GiB memory in use. Of the allocated memory 13.92 GiB is allocated by PyTorch, and 201.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[02:39:01] Traceback (most recent call last):
+  File "/root/autodl-tmp/MyApp/backend.py", line 678, in run_training
+    train_loss = backend.train_epoch()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/backend.py", line 484, in train_epoch
+    _3d, logits, to_KL = self.model(img, point, sub_box, obj_box)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/model/iagnet.py", line 340, in forward
+    _3daffordance, logits, to_KL = self.decoder(F_j, affordance, F_p_wise)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/model/iagnet.py", line 256, in forward
+    up_sample = self.fp1(p_0[0], p_1[0], torch.cat([p_0[0], p_0[1]], 1), up_sample)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/model/pointnet2_utils.py", line 287, in forward
+    interpolated_points = torch.sum(index_points(points2, idx) * weight.view(B, N, 3, 1), dim=2)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MyApp/model/pointnet2_utils.py", line 45, in index_points
+    new_points = points[batch_indices, idx, :]
+                 ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 31.36 GiB of which 123.75 MiB is free. Including non-PyTorch memory, this process has 14.72 GiB memory in use. Process 30792 has 16.50 GiB memory in use. Of the allocated memory 13.92 GiB is allocated by PyTorch, and 201.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
