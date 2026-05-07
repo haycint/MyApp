@@ -23,3 +23,5 @@ PyYAML>=6.0
 
 # Optional: 3D visualization (for advanced visualization)
 # open3d>=0.16.0
+
+gensim>=4.4.0

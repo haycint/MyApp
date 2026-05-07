@@ -56,6 +56,7 @@ class PIAD(Dataset):
         self.b_path = box_path
         self.pair_num = pair
         self.img_size = img_size
+        self.text_embedder = TextEmbedder()
         '''
         print("=================================================================")
         print("img_path:",self.i_path,"...",img_path)
@@ -99,9 +100,23 @@ class PIAD(Dataset):
     def __len__(self):
         return len(self.img_files)
 
+    def get_object_text(self, img_path):
+        return img_path.split('_')[-3]
+
+    def get_affordance_text(self, img_path):
+        return img_path.split('_')[-2]
+
+    def get_text_embeddings(self, img_path):
+        object_text = self.get_object_text(img_path)
+        affordance_text = self.get_affordance_text(img_path)
+        object_embed = self.text_embedder.embed_text(object_text)
+        affordance_embed = self.text_embedder.embed_text(affordance_text)
+        return object_embed, affordance_embed
+
     def __getitem__(self, index):
         img_path = self.img_files[index]
         box_path = self.box_files[index]
+        object_embed, affordance_embed = self.get_text_embeddings(img_path)
 
         try:
             Img = Image.open(img_path).convert('RGB')
@@ -154,9 +169,9 @@ class PIAD(Dataset):
             affordance_label, _ = self.get_affordance_label(img_path, affordance_label)
 
         if self.run_type == 'train':
-            return Img, Points_List, affordance_label_List, affordance_index_List, sub_box, obj_box
+            return Img, Points_List, affordance_label_List, affordance_index_List, sub_box, obj_box, object_embed, affordance_embed
         else:
-            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box
+            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box, object_embed, affordance_embed
 
     def read_file(self, path, number_dict=None):
         file_list = []
@@ -288,6 +303,36 @@ from torchvision import transforms
 import json
 import random
 import os
+import re
+import gensim.downloader as api
+
+
+class TextEmbedder:
+    """Load a public pretrained text embedding model and vectorize annotation labels."""
+
+    def __init__(self, embedding_name='glove-wiki-gigaword-100'):
+        self.embedding_name = embedding_name
+        self.embedding_dim = 100
+        self.model = None
+
+    def _load_model(self):
+        if self.model is None:
+            self.model = api.load(self.embedding_name)
+
+    def tokenize(self, text):
+        text = re.sub(r'([a-z])([A-Z])', r'\1 \2', str(text))
+        text = re.sub(r'[_\-\.\/]+', ' ', text)
+        tokens = [token.lower() for token in text.split() if token]
+        return tokens
+
+    def embed_text(self, text):
+        self._load_model()
+        tokens = self.tokenize(text)
+        vecs = [self.model[token] for token in tokens if token in self.model]
+        if len(vecs) == 0:
+            return torch.zeros(self.embedding_dim, dtype=torch.float32)
+        embedding = np.mean(vecs, axis=0)
+        return torch.tensor(embedding, dtype=torch.float32)
 
 
 def pc_normalize(pc):
@@ -511,6 +556,7 @@ class PIAD(Dataset):
         self.b_path = box_path
         self.pair_num = pair
         self.img_size = img_size
+        self.text_embedder = TextEmbedder()
         
         # 数据增强开关
         self.augment = augment and (run_type == 'train')
@@ -619,6 +665,19 @@ class PIAD(Dataset):
     def __len__(self):
         return len(self.img_files)
 
+    def get_object_text(self, img_path):
+        return img_path.split('_')[-3]
+
+    def get_affordance_text(self, img_path):
+        return img_path.split('_')[-2]
+
+    def get_text_embeddings(self, img_path):
+        object_text = self.get_object_text(img_path)
+        affordance_text = self.get_affordance_text(img_path)
+        object_embed = self.text_embedder.embed_text(object_text)
+        affordance_embed = self.text_embedder.embed_text(affordance_text)
+        return object_embed, affordance_embed
+
     def __getitem__(self, index):
         img_path = self.img_files[index]
         box_path = self.box_files[index]
@@ -672,9 +731,9 @@ class PIAD(Dataset):
             affordance_label, _ = self.get_affordance_label(img_path, affordance_label)
 
         if self.run_type == 'train':
-            return Img, Points_List, affordance_label_List, affordance_index_List, sub_box, obj_box
+            return Img, Points_List, affordance_label_List, affordance_index_List, sub_box, obj_box, object_embed, affordance_embed
         else:
-            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box
+            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box, object_embed, affordance_embed
 
     def read_file(self, path, number_dict=None):
         file_list = []
@@ -801,6 +860,7 @@ class PIADInference(Dataset):
     def __init__(self, point_path, img_path, box_path, img_size=(224, 224)):
         super().__init__()
         self.img_size = img_size
+        self.text_embedder = TextEmbedder()
         self.affordance_label_list = ['grasp', 'contain', 'lift', 'open',
                                       'lay', 'sit', 'support', 'wrapgrasp', 'pour', 'move', 'display',
                                       'push', 'listen', 'wear', 'press', 'cut', 'stab']
@@ -819,6 +879,19 @@ class PIADInference(Dataset):
 
     def __len__(self):
         return len(self.img_files)
+
+    def get_object_text(self, img_path):
+        return img_path.split('_')[-3]
+
+    def get_affordance_text(self, img_path):
+        return img_path.split('_')[-2]
+
+    def get_text_embeddings(self, img_path):
+        object_text = self.get_object_text(img_path)
+        affordance_text = self.get_affordance_text(img_path)
+        object_embed = self.text_embedder.embed_text(object_text)
+        affordance_embed = self.text_embedder.embed_text(affordance_text)
+        return object_embed, affordance_embed
 
     def __getitem__(self, index):
         img_path = self.img_files[index]
@@ -932,6 +1005,7 @@ class PIADUnseenFewShot(Dataset):
         self.run_type = run_type
         self.img_size = img_size
         self.shot_num = shot_num
+        self.text_embedder = TextEmbedder()
         
         # 可承受性标签列表
         self.affordance_label_list = ['grasp', 'contain', 'lift', 'open',
@@ -958,6 +1032,19 @@ class PIADUnseenFewShot(Dataset):
     def __len__(self):
         return len(self.indices)
     
+    def get_object_text(self, img_path):
+        return img_path.split('_')[-3]
+
+    def get_affordance_text(self, img_path):
+        return img_path.split('_')[-2]
+
+    def get_text_embeddings(self, img_path):
+        object_text = self.get_object_text(img_path)
+        affordance_text = self.get_affordance_text(img_path)
+        object_embed = self.text_embedder.embed_text(object_text)
+        affordance_embed = self.text_embedder.embed_text(affordance_text)
+        return object_embed, affordance_embed
+
     def __getitem__(self, idx):
         # 获取实际索引
         actual_idx = self.indices[idx]
@@ -981,6 +1068,7 @@ class PIADUnseenFewShot(Dataset):
         
         # 获取可承受性标签
         affordance_label, affordance_index = self.get_affordance_label(img_path, affordance_label)
+        object_embed, affordance_embed = self.get_text_embeddings(img_path)
         
         # 为了与PIAD数据集格式一致，我们需要返回6个值
         # 训练模式下PIAD返回: Img, Points_List, affordance_label_List, affordance_index_List, sub_box, obj_box
@@ -988,10 +1076,10 @@ class PIADUnseenFewShot(Dataset):
         
         if self.run_type == 'train':
             # 训练模式：返回6个值
-            return Img, [Point], [affordance_label], [affordance_index], sub_box, obj_box
+            return Img, [Point], [affordance_label], [affordance_index], sub_box, obj_box, object_embed, affordance_embed
         else:
             # 测试模式：返回7个值（与原始PIAD的val模式一致）
-            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box
+            return Img, Point, affordance_label, img_path, point_path, sub_box, obj_box, object_embed, affordance_embed
     def read_file(self, path):
         """读取文件列表"""
         file_list = []

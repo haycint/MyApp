@@ -278,12 +278,18 @@ class MyNet(nn.Module):
         self.local_rank = local_rank
         self.normal_channel = normal_channel
         self.num_affordance = num_affordance
+        self.text_embedding_dim = 100
         if self.normal_channel:
             self.additional_channel = 3
         else:
             self.additional_channel = 0
 
         self.img_encoder = Img_Encoder()
+        self.text_proj = nn.Sequential(
+            nn.Linear(self.text_embedding_dim * 2, self.emb_dim),
+            nn.BatchNorm1d(self.emb_dim),
+            nn.ReLU()
+        )
         if pre_train and img_model_path is not None:
             try:
                 pretrain_dict = torch.load(img_model_path, map_location='cpu')
@@ -305,12 +311,14 @@ class MyNet(nn.Module):
 
         self.decoder = Decoder(self.additional_channel, self.emb_dim, self.N_p, self.N_raw, self.num_affordance)
 
-    def forward(self, img, xyz, sub_box, obj_box):
+    def forward(self, img, xyz, sub_box, obj_box, obj_text_embed=None, afford_text_embed=None):
         """
         img: [B, 3, H, W]
         xyz: [B, 3, 2048]
         sub_box: bounding box of the interactive subject
         obj_box: bounding box of the interactive object
+        obj_text_embed: [B, text_embedding_dim]
+        afford_text_embed: [B, text_embedding_dim]
         """
         B, C, N = xyz.size()
         if self.local_rank is not None:
@@ -326,6 +334,14 @@ class MyNet(nn.Module):
 
         F_p_wise = self.point_encoder(xyz)
         F_j = self.JRA(F_i, F_p_wise[-1][1])
+
+        if obj_text_embed is not None and afford_text_embed is not None:
+            obj_text_embed = obj_text_embed.to(device)
+            afford_text_embed = afford_text_embed.to(device)
+            text_input = torch.cat([obj_text_embed, afford_text_embed], dim=1)
+            text_feature = self.text_proj(text_input)
+            F_j = F_j + text_feature.unsqueeze(1)
+
         affordance = self.ARM(F_j, F_s, F_e)
 
         _3daffordance, logits, to_KL = self.decoder(F_j, affordance, F_p_wise)

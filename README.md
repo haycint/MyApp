@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# MyApp
-=======
 # IAGNet: 3D Object Affordance Grounding from 2D Interactions
 
 [![Paper](https://img.shields.io/badge/arXiv-2303.10437-b31b1b.svg)](https://arxiv.org/abs/2303.10437)
@@ -115,4 +112,3 @@ This project is for research purposes only. Please contact the authors for comme
 
 - Original Paper: https://arxiv.org/abs/2303.10437
 - Original Code: https://github.com/yyvhang/IAGNet
->>>>>>> d453872 (my commit)

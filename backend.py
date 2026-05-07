@@ -602,7 +602,7 @@ class TrainerBackend:
         num_batches = len(self.train_loader)
         loss_sum = 0
 
-        for i, (img, points, labels, logits_labels, sub_box, obj_box) in enumerate(self.train_loader):
+        for i, (img, points, labels, logits_labels, sub_box, obj_box, obj_embeds, afford_embeds) in enumerate(self.train_loader):
             if self.should_stop():
                 return None
 
@@ -619,8 +619,10 @@ class TrainerBackend:
                 logits_label = logits_label.to(self.device)
                 sub_box = sub_box.to(self.device)
                 obj_box = obj_box.to(self.device)
+                obj_embeds = obj_embeds.to(self.device)
+                afford_embeds = afford_embeds.to(self.device)
 
-                _3d, logits, to_KL = self.model(img, point, sub_box, obj_box)
+                _3d, logits, to_KL = self.model(img, point, sub_box, obj_box, obj_embeds, afford_embeds)
 
                 loss_hm = self.criterion_hm(_3d, label)
                 loss_ce = self.criterion_ce(logits, logits_label)
@@ -651,7 +653,7 @@ class TrainerBackend:
         num = 0
 
         with torch.no_grad():
-            for i, (img, point, label, _, _, sub_box, obj_box) in enumerate(self.val_loader):
+            for i, (img, point, label, _, _, sub_box, obj_box, obj_embeds, afford_embeds) in enumerate(self.val_loader):
                 if self.should_stop():
                     break
 
@@ -663,8 +665,10 @@ class TrainerBackend:
                 label = label.to(self.device)
                 sub_box = sub_box.to(self.device)
                 obj_box = obj_box.to(self.device)
+                obj_embeds = obj_embeds.to(self.device)
+                afford_embeds = afford_embeds.to(self.device)
 
-                _3d, logits, to_KL = self.model(img, point, sub_box, obj_box)
+                _3d, logits, to_KL = self.model(img, point, sub_box, obj_box, obj_embeds, afford_embeds)
 
                 val_loss_hm = self.criterion_hm(_3d, label)
                 val_loss_kl = kl_div(to_KL[0], to_KL[1])
