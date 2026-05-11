@@ -5,27 +5,42 @@
 seed: 42
 device: 'cuda'  # 'cuda' 或 'cpu'
 
+# ============ 训练模式 ============
+# 'imagenet': 使用 ImageNet 预训练的 ResNet-50 作为 backbone（推荐）
+# 'scratch':  从随机初始化的权重开始训练
+mode: 'imagenet'
+
 # ============ 数据设置 ============
 dataset_type: 'piad'  # 'piad', 'custom', 或 'synthetic'
-data_dir: './Data'   # PIAD数据目录
+data_dir: './Data'    # PIAD数据目录（包含 Seen/ 和 Unseen/ 子目录）
+setting: 'Seen'       # 'Seen' 或 'Unseen'
 img_size: [224, 224]  # 输入图像尺寸
 
 # ============ 模型设置 ============
 num_interactions: 17   # 可供性类别数量
-pretrained: true      # 是否使用预训练backbone
+pretrained: true       # 是否使用预训练backbone（mode=imagenet 时自动为 true）
+
+# ImageNet 预训练权重文件路径（可选）
+# 如果提供，优先从本地文件加载，否则通过 torchvision 自动下载
+# img_model_path: './ckpt/resnet50.pth'
+img_model_path: null
 
 # ============ 训练设置 ============
 epochs: 100
 batch_size: 8
-num_workers: 4
+num_workers: 0         # DataLoader 工作线程数（0=主线程加载）
+save_every: 5          # 每隔多少epoch保存
 
 # ============ 优化器设置 ============
-lr: 0.0001            # 初始学习率
-weight_decay: 0.0001  # 权重衰减
+lr: 0.0001             # 初始学习率
+weight_decay: 0.0001   # 权重衰减
+# ImageNet 预训练模式下，backbone 学习率自动设为 lr * 0.1
 
 # ============ 保存设置 ============
 save_dir: './checkpoints/annotation'
-save_every: 5         # 每隔多少epoch保存
+# 实际保存路径会根据 mode 自动追加子目录:
+#   imagenet → ./checkpoints/annotation/imagenet/
+#   scratch  → ./checkpoints/annotation/scratch/
 
 # ============ 可供性类别 ============
 affordance_labels:

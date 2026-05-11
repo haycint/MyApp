@@ -5,6 +5,11 @@ Annotation Dataset for Training Auto-Labeling Model
 数据格式：
 - 图像文件
 - 标注文件 (JSON格式，包含主体、客体边界框和动作类型)
+
+PIAD 文件名格式：
+  {something}_{object_category}_{affordance}_{something}.jpg
+  例如: 1_Chair_sit_1.jpg → affordance = 'sit'
+  split('_')[-2] 得到 affordance 名称
 """
 
 import os
@@ -27,19 +32,17 @@ AFFORDANCE_LABELS = [
 
 class AnnotationDataset(Dataset):
     """
-    标注模型训练数据集
-    
+    标注模型训练数据集（通用格式）
+
     数据结构:
     root_dir/
         images/
             img_001.jpg
-            img_002.jpg
             ...
         annotations/
             img_001.json
-            img_002.json
             ...
-    
+
     JSON格式:
     {
         "image_width": 640,
@@ -49,7 +52,7 @@ class AnnotationDataset(Dataset):
         "interaction": "grasp"
     }
     """
-    
+
     def __init__(
         self,
         root_dir,
@@ -58,19 +61,11 @@ class AnnotationDataset(Dataset):
         img_size=(224, 224),
         augment=False
     ):
-        """
-        Args:
-            root_dir: 数据根目录
-            split: 'train' 或 'val'
-            transform: 图像变换
-            img_size: 输出图像尺寸
-            augment: 是否数据增强
-        """
         self.root_dir = root_dir
         self.split = split
         self.img_size = img_size
         self.augment = augment and (split == 'train')
-        
+
         # 图像变换
         if transform:
             self.transform = transform
@@ -83,7 +78,7 @@ class AnnotationDataset(Dataset):
                     std=[0.229, 0.224, 0.225]
                 )
             ])
-        
+
         # 数据增强变换
         self.augmentation = transforms.Compose([
             transforms.ColorJitter(
@@ -95,56 +90,57 @@ class AnnotationDataset(Dataset):
             transforms.RandomHorizontalFlip(p=0.5),
             transforms.RandomRotation(degrees=10),
         ])
-        
+
         # 加载数据列表
         self.data_list = self._load_data_list()
-        
+
         print(f"Loaded {len(self.data_list)} samples for {split}")
-    
+
     def _load_data_list(self):
         """加载数据文件列表"""
         data_list = []
-        
+
         images_dir = os.path.join(self.root_dir, 'images')
         annotations_dir = os.path.join(self.root_dir, 'annotations')
-        
+
         if not os.path.exists(images_dir) or not os.path.exists(annotations_dir):
             print(f"Warning: Directory not found - {images_dir} or {annotations_dir}")
             return data_list
-        
+
         # 获取所有图像文件
-        image_files = [f for f in os.listdir(images_dir) if f.endswith(('.jpg', '.jpeg', '.png'))]
-        
+        image_files = [f for f in os.listdir(images_dir)
+                       if f.endswith(('.jpg', '.jpeg', '.png'))]
+
         for img_file in image_files:
             img_path = os.path.join(images_dir, img_file)
-            
+
             # 对应的标注文件
             ann_file = os.path.splitext(img_file)[0] + '.json'
             ann_path = os.path.join(annotations_dir, ann_file)
-            
+
             if os.path.exists(ann_path):
                 data_list.append({
                     'image_path': img_path,
                     'annotation_path': ann_path
                 })
-        
+
         # 划分训练/验证集
         random.seed(42)
         random.shuffle(data_list)
         split_idx = int(len(data_list) * 0.8)
-        
+
         if self.split == 'train':
             return data_list[:split_idx]
         else:
             return data_list[split_idx:]
-    
+
     def __len__(self):
         return len(self.data_list)
-    
+
     def __getitem__(self, idx):
         """
         获取单个样本
-        
+
         Returns:
             image: [3, H, W] 图像张量
             target: dict
@@ -154,48 +150,48 @@ class AnnotationDataset(Dataset):
                 - 'original_size': [2] 原始图像尺寸
         """
         data = self.data_list[idx]
-        
+
         # ============ 加载图像 ============
         image = Image.open(data['image_path']).convert('RGB')
         original_size = image.size  # (W, H)
-        
+
         # ============ 加载标注 ============
         with open(data['annotation_path'], 'r') as f:
             annotation = json.load(f)
-        
+
         subject_box = torch.tensor(annotation['subject_box'], dtype=torch.float32)
         object_box = torch.tensor(annotation['object_box'], dtype=torch.float32)
         interaction = annotation['interaction']
-        
+
         # 转换交互类型为索引
         if isinstance(interaction, str):
             interaction_idx = AFFORDANCE_LABELS.index(interaction)
         else:
             interaction_idx = interaction
-        
+
         # ============ 数据增强 ============
         if self.augment:
             image, subject_box, object_box = self._apply_augmentation(
                 image, subject_box, object_box, original_size
             )
-        
+
         # ============ 缩放边界框 ============
         scale_x = self.img_size[0] / original_size[0]
         scale_y = self.img_size[1] / original_size[1]
-        
+
         subject_box[0] *= scale_x
         subject_box[2] *= scale_x
         subject_box[1] *= scale_y
         subject_box[3] *= scale_y
-        
+
         object_box[0] *= scale_x
         object_box[2] *= scale_x
         object_box[1] *= scale_y
         object_box[3] *= scale_y
-        
+
         # ============ 图像变换 ============
         image = self.transform(image)
-        
+
         target = {
             'subject_box': subject_box,
             'object_box': object_box,
@@ -203,9 +199,9 @@ class AnnotationDataset(Dataset):
             'original_size': torch.tensor(original_size),
             'image_path': data['image_path']
         }
-        
+
         return image, target
-    
+
     def _apply_augmentation(self, image, subject_box, object_box, original_size):
         """应用数据增强"""
         # 水平翻转
@@ -214,20 +210,31 @@ class AnnotationDataset(Dataset):
             w = original_size[0]
             subject_box[0], subject_box[2] = w - subject_box[2], w - subject_box[0]
             object_box[0], object_box[2] = w - object_box[2], w - object_box[0]
-        
+
         # 颜色抖动
         image = self.augmentation(image)
-        
+
         return image, subject_box, object_box
 
 
 class PIADAnnotationDataset(Dataset):
     """
     从PIAD数据集构建标注训练数据集
-    
-    直接使用现有的PIAD数据格式
+
+    直接使用现有的PIAD数据格式。PIAD 文件名格式为:
+      {something}_{object_category}_{affordance}_{something}.jpg
+    其中 affordance 名称位于倒数第二个下划线分隔的部分，
+    可通过 path.split('_')[-2] 提取。
+
+    PIAD 的 JSON 标注文件格式:
+    {
+        "shapes": [
+            {"label": "subject", "points": [[x1,y1], [x2,y2]]},
+            {"label": "object",  "points": [[x1,y1], [x2,y2]]}
+        ]
+    }
     """
-    
+
     def __init__(
         self,
         data_dir,
@@ -238,7 +245,7 @@ class PIADAnnotationDataset(Dataset):
     ):
         """
         Args:
-            data_dir: PIAD数据目录
+            data_dir: PIAD数据目录 (包含 Seen/ 和 Unseen/ 子目录)
             setting: 'Seen' 或 'Unseen'
             split: 'train' 或 'test'
             img_size: 输出图像尺寸
@@ -249,7 +256,7 @@ class PIADAnnotationDataset(Dataset):
         self.split = split
         self.img_size = img_size
         self.augment = augment and (split == 'train')
-        
+
         # 图像变换
         self.transform = transforms.Compose([
             transforms.Resize(img_size),
@@ -259,57 +266,68 @@ class PIADAnnotationDataset(Dataset):
                 std=[0.229, 0.224, 0.225]
             )
         ])
-        
+
+        # 颜色抖动增强
+        self.color_jitter = transforms.ColorJitter(
+            brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1
+        )
+
         # 加载数据列表
         self.img_files, self.box_files = self._load_file_lists()
-        
+
         print(f"Loaded {len(self.img_files)} samples for {setting} {split}")
-    
+
     def _load_file_lists(self):
         """加载文件列表"""
         setting_dir = os.path.join(self.data_dir, self.setting)
-        
+
         if self.split == 'train':
             img_list_file = os.path.join(setting_dir, 'Img_Train.txt')
             box_list_file = os.path.join(setting_dir, 'Box_Train.txt')
         else:
             img_list_file = os.path.join(setting_dir, 'Img_Test.txt')
             box_list_file = os.path.join(setting_dir, 'Box_Test.txt')
-        
+
         img_files = self._read_file_list(img_list_file)
         box_files = self._read_file_list(box_list_file)
-        
+
         return img_files, box_files
-    
+
     def _read_file_list(self, path):
         """读取文件列表"""
         files = []
         if os.path.exists(path):
             with open(path, 'r') as f:
-                files = [line.strip() for line in f.readlines()]
+                files = [line.strip() for line in f.readlines() if line.strip()]
+        else:
+            print(f"[Warning] File list not found: {path}")
         return files
-    
+
     def __len__(self):
         return len(self.img_files)
-    
+
     def __getitem__(self, idx):
         """
         获取单个样本
+
+        Returns:
+            image: [3, H, W] 图像张量
+            target: dict 包含 subject_box, object_box, interaction 等
         """
         img_path = self.img_files[idx]
         box_path = self.box_files[idx]
-        
+
         # ============ 加载图像 ============
         image = Image.open(img_path).convert('RGB')
-        original_size = image.size
-        
+        original_size = image.size  # (W, H)
+
         # ============ 加载边界框标注 ============
         with open(box_path, 'r') as f:
             box_data = json.load(f)
-        
+
         subject_box = None
         object_box = None
-        
+
         for shape in box_data.get('shapes', []):
             if shape['label'] == 'subject':
                 points = shape['points']
@@ -327,40 +345,41 @@ class PIADAnnotationDataset(Dataset):
                     max(points[0][0], points[1][0]),
                     max(points[0][1], points[1][1])
                 ], dtype=torch.float32)
-        
+
         # 如果没有标注，使用默认值
         if subject_box is None:
             subject_box = torch.tensor([0, 0, 50, 50], dtype=torch.float32)
         if object_box is None:
             object_box = torch.tensor([50, 50, 150, 150], dtype=torch.float32)
-        
+
         # ============ 提取交互类型 ============
-        # 从文件名中提取
+        # PIAD文件名格式: {xxx}_{object}_{affordance}_{xxx}.jpg
+        # affordance 位于倒数第二个下划线分隔部分
         interaction = self._extract_interaction(img_path)
-        
+
         # ============ 数据增强 ============
         if self.augment:
             image, subject_box, object_box = self._apply_augmentation(
                 image, subject_box, object_box, original_size
             )
-        
+
         # ============ 缩放边界框 ============
         scale_x = self.img_size[0] / original_size[0]
         scale_y = self.img_size[1] / original_size[1]
-        
+
         subject_box[0] *= scale_x
         subject_box[2] *= scale_x
         subject_box[1] *= scale_y
         subject_box[3] *= scale_y
-        
+
         object_box[0] *= scale_x
         object_box[2] *= scale_x
         object_box[1] *= scale_y
         object_box[3] *= scale_y
-        
+
         # ============ 图像变换 ============
         image = self.transform(image)
-        
+
         target = {
             'subject_box': subject_box,
             'object_box': object_box,
@@ -368,22 +387,40 @@ class PIADAnnotationDataset(Dataset):
             'original_size': torch.tensor(original_size),
             'image_path': img_path
         }
-        
+
         return image, target
-    
+
     def _extract_interaction(self, path):
-        """从文件名提取交互类型"""
+        """
+        从PIAD文件名提取交互类型
+
+        PIAD文件名格式: {xxx}_{object_category}_{affordance}_{xxx}.jpg
+        例如: 1_Chair_sit_1.jpg → affordance = 'sit'
+        规则: split('_')后，倒数第二个元素为affordance名称
+
+        Returns:
+            int: affordance类别索引 (0~16)
+        """
         filename = os.path.basename(path)
-        parts = filename.split('_')
-        
-        # 假设格式: xxx_objectname_interaction_xxx.jpg
-        for i, part in enumerate(parts):
-            if part.lower() in [aff.lower() for aff in AFFORDANCE_LABELS]:
-                return AFFORDANCE_LABELS.index(part.lower())
-        
-        # 默认返回0 (grasp)
+        # 去除扩展名
+        name = os.path.splitext(filename)[0]
+        parts = name.split('_')
+
+        # 倒数第二个部分是affordance名称（与PIAD dataset.py一致）
+        if len(parts) >= 2:
+            affordance_name = parts[-2]
+            if affordance_name in AFFORDANCE_LABELS:
+                return AFFORDANCE_LABELS.index(affordance_name)
+
+        # 回退：遍历所有部分查找匹配
+        for part in reversed(parts):
+            if part in AFFORDANCE_LABELS:
+                return AFFORDANCE_LABELS.index(part)
+
+        # 兜底：返回 0 (grasp)
+        print(f"[Warning] Cannot extract affordance from: {filename}, defaulting to 0 (grasp)")
         return 0
-    
+
     def _apply_augmentation(self, image, subject_box, object_box, original_size):
         """应用数据增强"""
         # 水平翻转
@@ -392,7 +429,10 @@ class PIADAnnotationDataset(Dataset):
             w = original_size[0]
             subject_box[0], subject_box[2] = w - subject_box[2], w - subject_box[0]
             object_box[0], object_box[2] = w - object_box[2], w - object_box[0]
-        
+
+        # 颜色抖动
+        image = self.color_jitter(image)
+
         return image, subject_box, object_box
 
 
@@ -400,11 +440,11 @@ class SyntheticAnnotationDataset(Dataset):
     """
     合成数据集，用于在没有真实标注数据时进行测试/演示
     """
-    
+
     def __init__(self, num_samples=1000, img_size=(224, 224)):
         self.num_samples = num_samples
         self.img_size = img_size
-        
+
         self.transform = transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize(
@@ -412,17 +452,17 @@ class SyntheticAnnotationDataset(Dataset):
                 std=[0.229, 0.224, 0.225]
             )
         ])
-    
+
     def __len__(self):
         return self.num_samples
-    
+
     def __getitem__(self, idx):
         # 随机生成图像
         image = Image.fromarray(
             np.random.randint(0, 255, (*self.img_size, 3), dtype=np.uint8)
         )
         image = self.transform(image)
-        
+
         # 随机生成边界框
         subject_box = torch.tensor([
             random.uniform(10, 100),
@@ -430,17 +470,17 @@ class SyntheticAnnotationDataset(Dataset):
             random.uniform(100, 200),
             random.uniform(100, 200)
         ], dtype=torch.float32)
-        
+
         object_box = torch.tensor([
             random.uniform(10, 100),
             random.uniform(10, 100),
             random.uniform(100, 200),
             random.uniform(100, 200)
         ], dtype=torch.float32)
-        
+
         # 随机交互类型
         interaction = random.randint(0, 16)
-        
+
         target = {
             'subject_box': subject_box,
             'object_box': object_box,
@@ -448,7 +488,7 @@ class SyntheticAnnotationDataset(Dataset):
             'original_size': torch.tensor(self.img_size),
             'image_path': f'synthetic_{idx}'
         }
-        
+
         return image, target
 
 
@@ -458,13 +498,13 @@ def collate_fn(batch):
     """
     images = []
     targets = []
-    
+
     for image, target in batch:
         images.append(image)
         targets.append(target)
-    
+
     images = torch.stack(images, dim=0)
-    
+
     return images, targets
 
 
@@ -480,11 +520,11 @@ def build_dataloader(
 ):
     """
     构建数据加载器
-    
+
     Args:
         dataset_type: 'piad', 'custom', 或 'synthetic'
         data_dir: 数据目录
-        setting: 'Seen' 或 'Unseen'
+        setting: 'Seen' 或 'Unseen'（仅 piad 类型有效）
         split: 'train' 或 'val'/'test'
         batch_size: 批量大小
         num_workers: 工作线程数
@@ -511,7 +551,7 @@ def build_dataloader(
             num_samples=1000,
             img_size=img_size
         )
-    
+
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,
@@ -520,15 +560,30 @@ def build_dataloader(
         collate_fn=collate_fn,
         pin_memory=True
     )
-    
+
     return dataloader
 
 
 if __name__ == "__main__":
+    # 测试 PIAD 数据集的 interaction 提取
+    test_filenames = [
+        "1_Chair_sit_1.jpg",
+        "5_Bottle_pour_3.jpg",
+        "10_Knife_cut_2.jpg",
+        "3_Mug_wrapgrasp_1.jpg",
+        "2_Table_support_4.png",
+    ]
+
+    temp_dataset = PIADAnnotationDataset.__new__(PIADAnnotationDataset)
+    print("Testing _extract_interaction with PIAD filenames:")
+    for fn in test_filenames:
+        idx = temp_dataset._extract_interaction(fn)
+        print(f"  {fn:40s} → affordance_idx={idx:2d} ({AFFORDANCE_LABELS[idx]})")
+
     # 测试合成数据集
     dataset = SyntheticAnnotationDataset(num_samples=100)
-    print(f"Dataset size: {len(dataset)}")
-    
+    print(f"\nDataset size: {len(dataset)}")
+
     image, target = dataset[0]
     print(f"Image shape: {image.shape}")
     print(f"Subject box: {target['subject_box']}")
